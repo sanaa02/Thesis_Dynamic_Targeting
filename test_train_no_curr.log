@@ -1,0 +1,56 @@
+WARNING:bsk_patches:[bsk_patches] P5: no class with was_image_taken_since_last_check in access_satellite — trying deeper scan
+INFO:__main__:Direct Training: 4,608 total steps (Ablation Run)
+INFO:__main__:Starting direct model training for 4,608 steps...
+/home/sanaa/anaconda3/envs/thesis_py311/lib/python3.11/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.time_limit to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.time_limit` for environment variables or `env.get_wrapper_attr('time_limit')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/sanaa/anaconda3/envs/thesis_py311/lib/python3.11/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.satellites to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.satellites` for environment variables or `env.get_wrapper_attr('satellites')` that will search the reminding wrappers.[0m
+  logger.warn(
+/home/sanaa/anaconda3/envs/thesis_py311/lib/python3.11/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.envs to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.envs` for environment variables or `env.get_wrapper_attr('envs')` that will search the reminding wrappers.[0m
+  logger.warn(
+[90;3m2026-06-28 13:39:42,473 [0m[36msats.satellite.ALSAT-1         [0m[93mWARNING    [0m[33m<6150.00> [0m[36mALSAT-1: [0m[93mfailed altitude_valid check[0m
+WARNING:bsk_rl.sats.satellite.ALSAT-1:failed altitude_valid check
+WARNING:env_alsat_dynamic:[FATAL] Satellite is not alive (failed check) inside sub-step loop at t=20s. Terminating episode immediately.
+WARNING:env_alsat_dynamic:[FATAL] Satellite is not alive (failed check) at t=20s. Terminating episode immediately.
+[90;3m2026-06-28 13:41:53,555 [0m[36msats.satellite.ALSAT-1         [0m[93mWARNING    [0m[33m<135010.00> [0m[36mALSAT-1: [0m[93mfailed altitude_valid check[0m
+WARNING:bsk_rl.sats.satellite.ALSAT-1:failed altitude_valid check
+WARNING:env_alsat_dynamic:[FATAL] Satellite is not alive (failed check) inside sub-step loop at t=20s. Terminating episode immediately.
+WARNING:env_alsat_dynamic:[FATAL] Satellite is not alive (failed check) at t=20s. Terminating episode immediately.
+[bsk_patches] All patches: eclipse=OK  lookahead=OK  power=OK  dyn_lock=OK  dyn_img=OK
+[DEBUG] make_env: event_rate=1.0
+[DEBUG] make_env: event_rate=1.0
+[DEBUG] make_env: event_rate=1.0
+[DEBUG] make_env: event_rate=1.0
+
+────────────────────────────────────────────────────────────────────────
+  ALSAT-EO-1 Training  [no-curriculum-dense]
+  Logs → /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/logs_no_curriculum/
+  training.csv         — per-iteration metrics
+  episodes.jsonl       — per-episode summary
+  decisions.log        — per-step action log
+  orbit.log            — satellite position (every 20 steps)
+────────────────────────────────────────────────────────────────────────
+        Step     Ep   EpLen    Reward     Loss   Entropy   DynSuc    FPS  ETA
+  ──────────  ─────  ──────  ────────  ───────  ────────  ───────  ─────  ────────
+
+[ThesisLogger] Jury verification active â /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/logs_no_curriculum/../results/verification/
+         288      0     0.0    +0.000         ?          ?       0%      4  [no-curriculum-dense] 18m
+         576      1   498.0   +20.214   +0.569    -0.334      98%      3  [no-curriculum-dense] 22m
+         864      1   498.0   +20.214   +0.093    -0.545      98%      3  [no-curriculum-dense] 21m
+       1,152      2   415.0   +11.150   +0.061    -0.300      95%      2  [no-curriculum-dense] 29m
+
+────────────────────────────────────────────────────────────────────────
+  Training complete.  steps=1,152  eps=2  elapsed=5.5min
+  Logs written to /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/logs_no_curriculum/
+────────────────────────────────────────────────────────────────────────
+
+
+[ThesisLogger] All verification files saved â /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/logs_no_curriculum/../results/verification/
+  cloud_predictions.csv â CNN vs truth per target per episode
+  episode_summary.csv   â per-episode stats
+  cloud_patches/        â MODIS patch grids with forecast overlay
+  maps/                 â Algeria maps with events and decisions
+  timelines/            â decision + reward + cloud error per episode
+
+Ablation Model saved → /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/models/ppo_no_curriculum_s42.zip  (5.6 min)
+
+Direct training complete. Model: /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/models/ppo_no_curriculum_s42.zip

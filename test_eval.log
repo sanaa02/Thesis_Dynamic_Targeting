@@ -1,0 +1,65 @@
+2026-06-28 12:22:34,931  INFO  [bsk_patches] P1 OK: next_eclipse sentinel+throttle
+2026-06-28 12:22:34,931  INFO  [bsk_patches] P2 OK: lookahead capped to 12000s on 2 classes
+2026-06-28 12:22:34,931  INFO  [bsk_patches] P3 OK: basePowerDraw filtered
+2026-06-28 12:22:34,934  INFO  [bsk_patches] Patched ImagingSatellite.task_target_for_imaging to track tasking
+2026-06-28 12:22:34,934  INFO  [bsk_patches] P4 OK: DYN sub-step locking
+2026-06-28 12:22:34,934  INFO  [bsk_patches] P4 OK: DYN sub-step locking
+2026-06-28 12:22:34,934  WARNING  [bsk_patches] P5: no class with was_image_taken_since_last_check in access_satellite — trying deeper scan
+2026-06-28 12:22:34,937  INFO  [bsk_patches] P5 OK (AlsatSatellite direct): 1 class
+2026-06-28 12:22:34,937  INFO  [bsk_patches] All patches: eclipse=OK  lookahead=OK  power=OK  dyn_lock=OK  dyn_img=OK
+2026-06-28 12:22:34,938  INFO  Model matches 45 static targets. Using global_45_targets.json.
+2026-06-28 12:22:34,938  INFO  Initializing environment wrapper...
+2026-06-28 12:22:34,955  WARNING  RealVisionCloudModel: no CUDA GPU — running CNN on CPU.
+2026-06-28 12:22:34,956  INFO  RealVisionCloudModel: loaded truth for 45 targets from /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/config/cloud_reality/global_45_clouds.json
+2026-06-28 12:22:35,188  INFO  RealScoutImageProvider: 23482 patches loaded from /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/data/modis_patches
+2026-06-28 12:22:35,198  INFO  RealVisionCloudModel: CNN loaded from '/home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/models/cloud_cnn_real.pt' [276,897 params, device=cpu]
+2026-06-28 12:22:35,198  INFO  RealVisionCloudModel loaded (mode=real_cnn, patches=23482)
+[90;3m2026-06-28 12:22:35,217 [0m[mgym                            [0m[93mWARNING    [0m[93mUsing user-specified world type. Generally, the env-determined world type is sufficient.[0m
+2026-06-28 12:22:35,217  WARNING  Using user-specified world type. Generally, the env-determined world type is sufficient.
+2026-06-28 12:22:38,980  INFO  === Starting Robustness Stress Tests ===
+2026-06-28 12:22:38,980  INFO  
+Evaluating at Accuracy = 0.95 (degraded cloud model)...
+[bsk_patches] All patches: eclipse=OK  lookahead=OK  power=OK  dyn_lock=OK  dyn_img=OK
+[DEBUG] make_env: event_rate=1.0
+[DEBUG] Patched forecast called! Target=0, Time=0.0, Original=0.927, Degraded=0.911, Truth=0.742
+[DEBUG] Patched forecast called! Target=1, Time=0.0, Original=0.085, Degraded=0.081, Truth=0.000
+/home/sanaa/anaconda3/envs/thesis_py311/lib/python3.11/site-packages/gymnasium/core.py:311: UserWarning: [33mWARN: env.time_limit to get variables from other wrappers is deprecated and will be removed in v1.0, to get this variable you can do `env.unwrapped.time_limit` for environment variables or `env.get_wrapper_attr('time_limit')` that will search the reminding wrappers.[0m
+  logger.warn(
+2026-06-28 12:32:51,490  INFO    Accuracy 0.95 results: Reward=149.348 | Dyn Success=96.1%
+2026-06-28 12:32:51,491  INFO  
+Evaluating at Accuracy = 0.85 (degraded cloud model)...
+[DEBUG] Patched forecast called! Target=0, Time=0.0, Original=0.106, Degraded=0.182, Truth=0.742
+[DEBUG] Patched forecast called! Target=1, Time=0.0, Original=0.988, Degraded=0.841, Truth=0.000
+2026-06-28 12:43:08,190  INFO    Accuracy 0.85 results: Reward=149.348 | Dyn Success=96.1%
+2026-06-28 12:43:08,190  INFO  
+Evaluating at Accuracy = 0.75 (degraded cloud model)...
+[DEBUG] Patched forecast called! Target=0, Time=0.0, Original=0.967, Degraded=0.878, Truth=0.742
+[DEBUG] Patched forecast called! Target=1, Time=0.0, Original=0.143, Degraded=0.109, Truth=0.000
+2026-06-28 12:53:13,429  INFO    Accuracy 0.75 results: Reward=149.348 | Dyn Success=96.1%
+2026-06-28 12:53:13,429  INFO  
+Evaluating at Accuracy = 0.65 (degraded cloud model)...
+[DEBUG] Patched forecast called! Target=0, Time=0.0, Original=0.037, Degraded=0.238, Truth=0.742
+[DEBUG] Patched forecast called! Target=1, Time=0.0, Original=0.038, Degraded=0.027, Truth=0.000
+2026-06-28 13:03:07,807  INFO    Accuracy 0.65 results: Reward=149.348 | Dyn Success=96.1%
+2026-06-28 13:03:07,807  INFO  
+Evaluating at Accuracy = 0.50 (degraded cloud model)...
+[DEBUG] Patched forecast called! Target=0, Time=0.0, Original=0.037, Degraded=0.325, Truth=0.742
+[DEBUG] Patched forecast called! Target=1, Time=0.0, Original=0.097, Degraded=0.052, Truth=0.000
+2026-06-28 13:12:59,063  INFO    Accuracy 0.50 results: Reward=149.348 | Dyn Success=96.1%
+
+
+==================================================
+      CNN ROBUSTNESS STRESS TEST RESULTS
+==================================================
+| CNN Accuracy | Mean Reward | Dyn Success | Cloud Free Rate | Wasted (Cloudy) |
+| :---: | :---: | :---: | :---: | :---: |
+| 95% | +149.348 | 96.1% | 96.0% | 4.0% |
+| 85% | +149.348 | 96.1% | 96.0% | 4.0% |
+| 75% | +149.348 | 96.1% | 96.0% | 4.0% |
+| 65% | +149.348 | 96.1% | 96.0% | 4.0% |
+| 50% | +149.348 | 96.1% | 96.0% | 4.0% |
+==================================================
+Saved results to:
+  - /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/results/evaluation/robustness_results.json
+  - /home/sanaa/Videos/Thesis_Dynamic_Targeting_copy2/results/evaluation/robustness_table.csv
+

@@ -1,0 +1,117 @@
+# ALSAT-EO-1 Training Configuration
+# All 20 improvements applied (A1 system)
+
+# ─── Environment ────────────────────────────────────────────────────────────
+env:
+  event_rate:         1.0          # events per hour (default)
+  sim_duration_s:     172800       # 48 hours per episode
+  step_ref_s:         1200         # SMDP reference step (20 min)
+  base_step_s:        30           # simulator sub-step
+  n_static_targets:   20
+  n_dyn_slots:        3
+  obs_dim:            56           # base obs (43 base + 12 dyn + 1 sojourn)
+  action_space_n:     24           # 20 static + 3 dyn + 1 drift
+
+# ─── PPO Hyperparameters ─────────────────────────────────────────────────────
+ppo:
+  learning_rate:      3.0e-4
+  n_steps:            144          # IMP-11 fix: 1 episode = 144 steps
+  batch_size:         64
+  n_epochs:           10
+  gamma:              0.99
+  gae_lambda:         0.95
+  ent_coef_start:     0.15         # IMP-06 annealed entropy
+  ent_coef_end:       0.01
+  vf_coef:            0.5
+  max_grad_norm:      0.5
+  net_arch:
+    pi:               [256, 256]
+    vf:               [256, 256]
+
+# ─── Reward Constants ────────────────────────────────────────────────────────
+reward:
+  dynamic_bonus:      1.0          # IMP-09 (ablated over [0, 0.5, 1.0, 2.0])
+  dyn_multiplier:     1.5          # IMP-09 (ablated over [1.0, 1.5, 2.0])
+  slew_energy_alpha:  0.1
+  cloud_thresh:       0.3
+  miss_per_step_cap:  0.3          # max missed-event penalty per step
+
+# ─── Curriculum (IMP-11) ─────────────────────────────────────────────────────
+curriculum:
+  enabled:            true
+  stages:
+    - name:           static_clear
+      event_rate:     0.0
+      clear_sky:      true
+      n_episodes:     50
+    - name:           static_clouds
+      event_rate:     0.0
+      clear_sky:      false
+      n_episodes:     50
+    - name:           dynamic_sparse
+      event_rate:     0.5
+      clear_sky:      false
+      n_episodes:     100
+    - name:           dynamic_dense
+      event_rate:     2.0
+      clear_sky:      false
+      n_episodes:     300
+
+# ─── Attention Policy (IMP-01) ───────────────────────────────────────────────
+attention:
+  enabled:            false        # set true to use SchedulerAttentionExtractor
+  n_heads:            4
+  embed_dim:          64
+  n_layers:           2
+  dropout:            0.1
+
+# ─── Transfer Learning (IMP-12) ──────────────────────────────────────────────
+transfer:
+  enabled:            false
+  static_pretrain_steps: 300000
+  dynamic_finetune_steps: 700000
+  pretrained_model:   models/ppo_static_pretrain_s42.zip
+
+# ─── Real Data (IMP-13) ──────────────────────────────────────────────────────
+real_data:
+  enabled:            false        # set true when real data files exist
+  tle_path:           config/orbit/alsat2a.tle
+  events_path:        data/real_events/firms_gdacs_algeria.json
+  cloud_json:         config/cloud_reality/era5_clouds_algeria.json
+  modis_dir:          data/modis_patches
+
+# ─── Safety Monitor ──────────────────────────────────────────────────────────
+safety:
+  enabled:            true
+  max_off_nadir_deg:  45.0
+  min_battery_soc:    0.2
+  max_temperature_c:  80.0
+
+# ─── Multi-satellite (IMP-14) ────────────────────────────────────────────────
+multi_sat:
+  enabled:            false
+  n_satellites:       2
+  claim_registry:     true
+
+# ─── Ablation Experiments ────────────────────────────────────────────────────
+ablations:
+  smdp_vs_flat:       false
+  entropy_annealing:  false
+  cloud_uncertainty:  false
+  dynamic_bonus:      false
+  transfer_vs_scratch: false
+  rate_sensitivity:   false
+
+# ─── Evaluation ──────────────────────────────────────────────────────────────
+evaluation:
+  n_eval_episodes:    30
+  eval_seeds:         [42, 123, 456]
+  deterministic:      true
+
+# ─── Output ──────────────────────────────────────────────────────────────────
+output:
+  model_dir:          models/
+  results_dir:        results/
+  tensorboard_dir:    results/tensorboard/
+  checkpoint_freq:    100          # episodes between checkpoints
+  log_level:          INFO

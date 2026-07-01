@@ -1,0 +1,410 @@
+#!/usr/bin/env python3
+"""
+train_full_system.py  --  ALSAT-EO-1  Full A1 System Training  (v2)
+====================================================================
+Main training script with ALL 20 improvements active.
+
+VERSION STAMP: v2 — uses ALSATLogger, batch_size=48, verbose=0
+If you see SB3's table output or a batch_size=64 warning,
+you are running the OLD version of this file. Replace it with
+the one from the Replit workspace:
+  scripts/training/train_full_system.py
+
+LOGGING  (via alsat_logger.py)
+  Terminal:           one clean line per PPO iteration (reward, loss, entropy, ETA)
+  logs/training.csv   per-iteration metrics (machine-readable)
+  logs/episodes.jsonl per-episode summary (reward, imaged counts, battery, etc.)
+  logs/decisions.log  per-step: which target/event chosen, reward received
+  logs/orbit.log      satellite position every 20 steps (lat/lon/wilaya)
+
+USAGE
+-----
+  python scripts/training/train_full_system.py --seed 42 --quick   # 100k steps
+  python scripts/training/train_full_system.py --seed 42            # 1M steps
+"""
+from __future__ import annotations
+
+import argparse
+import logging
+import os
+import sys
+import time
+
+import numpy as np
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+import path_setup  # noqa
+
+ROOT = path_setup.root_path()
+for _d in ["scripts/core", "scripts/training", "scripts/wrappers",
+           "scripts/models", "scripts/evaluation", "scripts"]:
+    _p = os.path.join(ROOT, _d)
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
+
+# ── Silence all Python loggers to keep terminal clean ─────────────────────
+# Detailed output goes to logs/ via ALSATLogger.
+logging.basicConfig(level=logging.WARNING, format="%(levelname)s  %(name)s  %(message)s")
+# Also silence noisy bsk_rl / Basilisk messages
+_BSK_MUTE = frozenset([
+    "Creating logger for new env", "Old environments in process",
+    "basePowerDraw should probably be zero or negative",
+    "Could not find eclipse transitions",
+    "initial_generation_duration is shorter than the maximum window length",
+])
+_orig_ch = logging.Logger.callHandlers
+def _quiet(self, r):
+    try:
+        if any(s in r.getMessage() for s in _BSK_MUTE): return
+    except Exception: pass
+    _orig_ch(self, r)
+logging.Logger.callHandlers = _quiet
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# ── Early import check: fail loudly here, not mid-training ────────────────
+try:
+    from alsat_logger import make_loggers as _make_loggers_check  # noqa
+except ImportError as _e:
+    print(
+        "\n" + "!"*70 +
+        f"\n  ERROR: cannot import alsat_logger: {_e}"
+        "\n  Make sure scripts/training/alsat_logger.py exists."
+        "\n  Download it from the Replit workspace."
+        "\n" + "!"*70 + "\n"
+    )
+    sys.exit(1)
+
+TARGETS  = os.path.join(ROOT, "config/targets/global_45_targets.json")
+CLOUD    = os.path.join(ROOT, "config/cloud_reality/global_45_clouds.json")
+MODELS   = os.path.join(ROOT, "models")
+RESULTS  = os.path.join(ROOT, "results")
+LOGS_DIR = os.path.join(ROOT, "logs")
+
+# IMP-09: optimised reward constants
+DYNAMIC_BONUS  = 1.0
+DYN_MULTIPLIER = 1.5
+
+# IMP-11: n_steps must equal one full episode
+# SIM_DURATION_S=172800, SCHED_STEP_S=1200 → 144 steps per episode
+try:
+    from env_alsat_debug import SIM_DURATION_S, SCHED_STEP_S
+    N_STEPS = max(1, int(SIM_DURATION_S / SCHED_STEP_S))   # 144
+except ImportError:
+    N_STEPS = 144
+
+# BATCH_SIZE must divide N_STEPS evenly to avoid truncated mini-batches.
+# 144 / 3 = 48  (3 equal mini-batches per rollout)
+BATCH_SIZE = 48
+
+
+def build_env(
+    seed:         int,
+    event_rate:   float = 1.0,
+    use_real_data: bool = False,
+    use_safety:    bool = True,
+    use_oracle:    bool = False,
+):
+    """Build the full A1 training environment with all wrappers."""
+    from env_dynamic_factory import make_env, Config
+    from stable_baselines3.common.monitor import Monitor
+
+    env = make_env(Config.DYN_MODIS, TARGETS, CLOUD,
+                   event_rate=event_rate, seed=seed,
+                   with_safety=use_safety)
+
+    # IMP-07: oracle cloud
+    if use_oracle:
+        try:
+            from oracle_cloud_wrapper import OracleCloudWrapper
+            env = OracleCloudWrapper(env, oracle_cloud=True)
+        except Exception:
+            pass
+
+    # IMP-05: reward shaping
+    try:
+        from reward_shaping import DynamicRewardShaper
+        env = DynamicRewardShaper(env, urgency_scale=0.2, explore_bonus_init=0.05)
+    except Exception:
+        pass
+
+    # IMP-13: real data wrapper
+    if use_real_data:
+        try:
+            from env_alsat_real import RealDataWrapper, RealDataConfig
+            cfg = RealDataConfig.auto(root=ROOT)
+            env = RealDataWrapper(env, cfg)
+        except Exception as exc:
+            logger.warning(f"[IMP-13] RealDataWrapper skipped: {exc}")
+
+    return Monitor(env)
+
+
+def run_bc_pretrain(seed: int, n_demos: int = 2000) -> str | None:
+    """IMP-16: BC pre-training. Returns path to saved model or None."""
+    try:
+        from bc_demo_collection import collect_demos
+        from stable_baselines3 import PPO
+        from imitation.algorithms.bc import BC
+        from imitation.data.types import Transitions
+
+        demo_path = collect_demos(n_demos=n_demos, seed=seed, event_rate=1.0)
+        demos = np.load(demo_path)
+        obs, acts = demos["obs"], demos["actions"]
+        logger.info(f"[IMP-16] BC pretrain: {len(obs)} transitions")
+
+        env   = build_env(seed=seed, use_safety=False)
+        model = PPO("MlpPolicy", env, verbose=0, seed=seed, device="cpu")
+        transitions = Transitions(
+            obs=obs, acts=acts,
+            infos=np.array([{}] * len(obs)),
+            next_obs=np.roll(obs, -1, axis=0),
+            dones=np.zeros(len(obs), dtype=bool),
+        )
+        bc = BC(observation_space=env.observation_space,
+                action_space=env.action_space,
+                demonstrations=transitions,
+                policy=model.policy,
+                rng=np.random.default_rng(seed))
+        bc.train(n_epochs=50)
+        bc_path = os.path.join(MODELS, f"ppo_bc_pretrain_s{seed}.zip")
+        model.save(bc_path)
+        env.close()
+        return bc_path
+    except Exception as exc:
+        logger.warning(f"[IMP-16] BC pretrain failed (non-fatal): {exc}")
+        return None
+
+
+def _make_ppo(vec_env, policy_kwargs: dict, seed: int) -> object:
+    """Create PPO with correct n_steps and batch_size."""
+    from stable_baselines3 import PPO
+    return PPO(
+        "MlpPolicy", vec_env,
+        learning_rate = 3e-4,
+        n_steps       = N_STEPS,       # IMP-11: 144 = 1 full episode
+        batch_size    = BATCH_SIZE,    # 48 divides 144 evenly (no truncated mini-batches)
+        n_epochs      = 10,
+        gamma         = 0.99,
+        gae_lambda    = 0.95,
+        ent_coef      = 0.15,
+        vf_coef       = 0.5,
+        max_grad_norm = 0.5,
+        policy_kwargs = policy_kwargs,
+        verbose       = 0,             # ALSATLogger handles terminal output
+        seed          = seed,
+        device        = "cpu",
+    )
+
+
+def run_curriculum_training(
+    seed:          int,
+    total_steps:   int,
+    use_attention: bool = False,
+    use_oracle:    bool = False,
+    use_real_data: bool = False,
+    fresh_logs:    bool = True,
+) -> object:
+    """
+    IMP-11: 3-stage curriculum with fixed n_steps=144.
+
+    Stage 1 (10% steps): event_rate=0.0   — static targets only
+    Stage 2 (20% steps): event_rate=0.5   — sparse dynamic events
+    Stage 3 (70% steps): event_rate=2.0   — dense dynamic events
+    """
+    from stable_baselines3.common.vec_env import DummyVecEnv
+    from stable_baselines3.common.callbacks import CallbackList
+    from alsat_logger import make_loggers  # already verified at import time above
+
+    os.makedirs(MODELS, exist_ok=True)
+    os.makedirs(LOGS_DIR, exist_ok=True)
+
+    stages = [
+        {"event_rate": 0.0, "steps": max(N_STEPS, total_steps // 10),
+         "label": "static-only"},
+        {"event_rate": 0.5, "steps": max(N_STEPS, total_steps // 5),
+         "label": "sparse-events"},
+        {"event_rate": 2.0,
+         "steps": total_steps - total_steps // 10 - total_steps // 5,
+         "label": "dense-events"},
+    ]
+
+    # ── Policy kwargs ─────────────────────────────────────────────────────────
+    policy_kwargs: dict = {}
+    if use_attention:
+        try:
+            from attention_policy import SchedulerAttentionExtractor
+            policy_kwargs = dict(
+                features_extractor_class  = SchedulerAttentionExtractor,
+                features_extractor_kwargs = dict(n_heads=4, embed_dim=64),
+                net_arch = dict(pi=[256, 128], vf=[256, 128]),
+            )
+            logger.info("[IMP-01] Attention policy active")
+        except Exception as exc:
+            logger.warning(f"[IMP-01] Attention policy unavailable: {exc}")
+
+    # ── Build initial env and model ───────────────────────────────────────────
+    vec = DummyVecEnv([lambda: build_env(
+        seed, event_rate=0.0, use_oracle=use_oracle, use_real_data=use_real_data
+    )])
+    model = _make_ppo(vec, policy_kwargs, seed)
+
+    # ── IMP-06: entropy annealing callback ────────────────────────────────────
+    extra_cbs = []
+    try:
+        from callbacks import EntropyAnnealingCallback
+        extra_cbs.append(EntropyAnnealingCallback(
+            start_val=0.15, end_val=0.01,
+            total_timesteps=total_steps, verbose=0))
+    except ImportError:
+        pass
+
+    # ── Curriculum loop ───────────────────────────────────────────────────────
+    cumulative = 0
+    for i, stage in enumerate(stages):
+        n_stage = stage["steps"]
+        label   = stage["label"]
+        rate    = stage["event_rate"]
+
+        logger.info(f"Stage: {label}  event_rate={rate}  steps={n_stage:,}")
+
+        # Rebuild env for this stage
+        vec.close()
+        vec = DummyVecEnv([lambda r=rate: build_env(
+            seed, event_rate=r, use_oracle=use_oracle, use_real_data=use_real_data
+        )])
+        model.set_env(vec)
+
+        # ALSATLogger for this stage (fresh_logs only on first stage to clear old runs)
+        alsat_cb = make_loggers(
+            total_timesteps = n_stage,
+            stage_label     = label,
+            log_dir         = LOGS_DIR,
+            orbit_every     = 20,
+            fresh_logs      = fresh_logs and (i == 0),
+        )
+        all_cbs = CallbackList([alsat_cb] + extra_cbs)
+
+        model.learn(
+            total_timesteps    = n_stage,
+            callback           = all_cbs,
+            reset_num_timesteps = (cumulative == 0),
+            progress_bar       = False,   # ALSATLogger has its own ETA
+        )
+        cumulative += n_stage
+
+        # Save checkpoint after each stage
+        ckpt = os.path.join(MODELS, f"ppo_stage_{label}_s{seed}.zip")
+        model.save(ckpt)
+        logger.info(f"Checkpoint → {ckpt}")
+
+    vec.close()
+    return model
+
+
+def run_full_training(
+    seed:          int   = 42,
+    total_steps:   int   = 1_000_000,
+    use_attention: bool  = False,
+    use_bc:        bool  = False,
+    use_real_data: bool  = False,
+    use_oracle:    bool  = False,
+    quick:         bool  = False,
+    fresh_logs:    bool  = True,
+) -> dict:
+
+    os.makedirs(MODELS,  exist_ok=True)
+    os.makedirs(RESULTS, exist_ok=True)
+    os.makedirs(LOGS_DIR, exist_ok=True)
+
+    if quick:
+        total_steps = 100_000
+        print(f"[QUICK mode] total_steps = {total_steps:,}")
+
+    print(f"\n{'='*60}")
+    print(f"  ALSAT-EO-1  Full System Training")
+    print(f"  seed={seed}  steps={total_steps:,}  n_steps={N_STEPS}  batch={BATCH_SIZE}")
+    print(f"  attention={use_attention}  bc={use_bc}  real={use_real_data}  oracle={use_oracle}")
+    print(f"{'='*60}\n")
+
+    t0 = time.time()
+
+    # IMP-09: patch reward constants
+    try:
+        import dynamic_event as _de
+        _de.DYNAMIC_BONUS  = DYNAMIC_BONUS
+        _de.DYN_MULTIPLIER = DYN_MULTIPLIER
+    except Exception:
+        pass
+
+    # IMP-16 (optional)
+    bc_path = None
+    if use_bc:
+        print("=== IMP-16: BC Pre-training ===")
+        bc_path = run_bc_pretrain(seed=seed, n_demos=500 if quick else 2000)
+
+    # IMP-11: curriculum training
+    model = run_curriculum_training(
+        seed=seed, total_steps=total_steps,
+        use_attention=use_attention,
+        use_oracle=use_oracle,
+        use_real_data=use_real_data,
+        fresh_logs=fresh_logs,
+    )
+
+    model_path = os.path.join(MODELS, f"ppo_full_system_s{seed}.zip")
+    model.save(model_path)
+    elapsed = time.time() - t0
+    print(f"\nModel saved → {model_path}  ({elapsed/60:.1f} min)\n")
+
+    # IMP-17: full evaluation
+    try:
+        from evaluate_full_system import run_full_evaluation
+        eval_results = run_full_evaluation(
+            model_path=model_path,
+            seeds=[seed],
+            n_episodes=5 if quick else 30,
+        )
+    except Exception as exc:
+        logger.warning(f"[IMP-17] Evaluation skipped: {exc}")
+        eval_results = {}
+
+    return {
+        "model_path":   model_path,
+        "bc_path":      bc_path,
+        "total_steps":  total_steps,
+        "seed":         seed,
+        "elapsed_min":  round(elapsed / 60, 2),
+        "eval_summary": eval_results.get("summary", {}),
+    }
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="ALSAT-EO-1 Full A1 System Training")
+    parser.add_argument("--seed",        type=int, default=42)
+    parser.add_argument("--steps",       type=int, default=1_000_000)
+    parser.add_argument("--attention",   action="store_true")
+    parser.add_argument("--bc-pretrain", action="store_true")
+    parser.add_argument("--real-data",   action="store_true")
+    parser.add_argument("--oracle-cloud",action="store_true")
+    parser.add_argument("--quick",       action="store_true",
+                        help="100k steps for testing")
+    parser.add_argument("--fresh-logs",  action="store_true", dest="fresh_logs",
+                        help="Delete existing logs/ files before starting (default: True; "
+                             "pass --no-fresh-logs to append instead)")
+    parser.add_argument("--no-fresh-logs", action="store_false", dest="fresh_logs")
+    parser.set_defaults(fresh_logs=True)
+    args = parser.parse_args()
+
+    result = run_full_training(
+        seed         = args.seed,
+        total_steps  = args.steps,
+        use_attention= args.attention,
+        use_bc       = args.bc_pretrain,
+        use_real_data= args.real_data,
+        use_oracle   = args.oracle_cloud,
+        quick        = args.quick,
+        fresh_logs   = args.fresh_logs,
+    )
+    print(f"Done.  Model: {result['model_path']}  ({result['elapsed_min']:.1f} min)")

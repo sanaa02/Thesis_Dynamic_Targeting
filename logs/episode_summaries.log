@@ -1,0 +1,16 @@
+↳ EPISODE 0  decisions=159 substeps=159  reward=-0.002  static=1/45 (2%)  dyn_suc=0% (0/0)  batt=100.0%
+↳ EPISODE 1  decisions=193 substeps=193  reward=+0.208  static=4/45 (9%)  dyn_suc=0% (0/0)  batt=100.0%
+↳ EPISODE 2  decisions=159 substeps=159  reward=-0.071  static=0/45 (0%)  dyn_suc=0% (0/0)  batt=100.0%  ⚠ PURE DRIFT
+↳ EPISODE 3  decisions=269 substeps=269  reward=+0.449  static=7/45 (16%)  dyn_suc=0% (0/0)  batt=100.0%
+↳ EPISODE 4  decisions=171 substeps=171  reward=+0.190  static=4/45 (9%)  dyn_suc=0% (0/0)  batt=100.0%
+↳ EPISODE 5  decisions=156 substeps=156  reward=+0.076  static=3/45 (7%)  dyn_suc=0% (0/0)  batt=100.0%
+↳ EPISODE 6  decisions=5757 substeps=5757  reward=-114.966  static=0/45 (0%)  dyn_suc=0% (0/19)  batt=100.0%  ⚠ PURE DRIFT
+↳ EPISODE 7  decisions=249 substeps=249  reward=+1.246  static=1/45 (2%)  dyn_suc=100% (18/18)  batt=100.0%
+↳ EPISODE 8  decisions=305 substeps=305  reward=+1.575  static=4/45 (9%)  dyn_suc=83% (20/24)  batt=100.0%
+↳ EPISODE 9  decisions=677 substeps=677  reward=+2.069  static=17/45 (38%)  dyn_suc=100% (21/21)  batt=100.0%
+↳ EPISODE 10  decisions=304 substeps=304  reward=+1.314  static=6/45 (13%)  dyn_suc=100% (17/17)  batt=100.0%
+↳ EPISODE 11  decisions=216 substeps=216  reward=+1.032  static=0/45 (0%)  dyn_suc=94% (16/17)  batt=100.0%
+↳ EPISODE 12  decisions=288 substeps=288  reward=+1.476  static=5/45 (11%)  dyn_suc=83% (19/23)  batt=100.0%
+↳ EPISODE 13  decisions=424 substeps=424  reward=+4.767  static=1/45 (2%)  dyn_suc=97% (73/75)  batt=100.0%
+↳ EPISODE 14  decisions=621 substeps=621  reward=+5.363  static=10/45 (22%)  dyn_suc=93% (81/87)  batt=100.0%
+↳ EPISODE 15  decisions=520 substeps=520  reward=+5.460  static=0/45 (0%)  dyn_suc=93% (92/99)  batt=100.0%

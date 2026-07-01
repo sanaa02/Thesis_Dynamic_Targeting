@@ -1,0 +1,927 @@
+{
+  "meta": {
+    "_fetched_utc": "2026-06-12T13:34:58.312459+00:00",
+    "_n_events": 91,
+    "_n_firms": 186,
+    "_n_gdacs": 1,
+    "_n_historical": 9,
+    "_bbox": [
+      18.9,
+      37.1,
+      -8.7,
+      11.9
+    ]
+  },
+  "events": [
+    {
+      "name": "wildfire_001",
+      "event_type": "wildfire",
+      "lat_deg": 31.1135,
+      "lon_deg": 8.6791,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:18Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_002",
+      "event_type": "wildfire",
+      "lat_deg": 31.3205,
+      "lon_deg": 11.8042,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:18Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_003",
+      "event_type": "wildfire",
+      "lat_deg": 31.9525,
+      "lon_deg": 11.1417,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:18Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_004",
+      "event_type": "wildfire",
+      "lat_deg": 33.3669,
+      "lon_deg": 8.5479,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:18Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_005",
+      "event_type": "wildfire",
+      "lat_deg": 35.203,
+      "lon_deg": 8.8364,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:18Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_006",
+      "event_type": "wildfire",
+      "lat_deg": 26.4341,
+      "lon_deg": 11.8479,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_007",
+      "event_type": "wildfire",
+      "lat_deg": 27.5261,
+      "lon_deg": 9.6213,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_008",
+      "event_type": "wildfire",
+      "lat_deg": 27.6997,
+      "lon_deg": 9.1715,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_009",
+      "event_type": "wildfire",
+      "lat_deg": 27.723,
+      "lon_deg": 9.8779,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_010",
+      "event_type": "wildfire",
+      "lat_deg": 27.9233,
+      "lon_deg": 9.2504,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_011",
+      "event_type": "wildfire",
+      "lat_deg": 27.9342,
+      "lon_deg": 8.3742,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_012",
+      "event_type": "wildfire",
+      "lat_deg": 28.0803,
+      "lon_deg": 9.7858,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_013",
+      "event_type": "wildfire",
+      "lat_deg": 28.1364,
+      "lon_deg": 9.8082,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_014",
+      "event_type": "wildfire",
+      "lat_deg": 28.1898,
+      "lon_deg": 9.8,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_015",
+      "event_type": "wildfire",
+      "lat_deg": 28.4479,
+      "lon_deg": 9.1366,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_016",
+      "event_type": "wildfire",
+      "lat_deg": 28.5253,
+      "lon_deg": 9.1166,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_017",
+      "event_type": "wildfire",
+      "lat_deg": 28.6304,
+      "lon_deg": 9.7871,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_018",
+      "event_type": "wildfire",
+      "lat_deg": 28.8189,
+      "lon_deg": 9.9055,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_019",
+      "event_type": "wildfire",
+      "lat_deg": 28.8651,
+      "lon_deg": 9.9341,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_020",
+      "event_type": "wildfire",
+      "lat_deg": 28.9159,
+      "lon_deg": 9.7492,
+      "priority": 0.9,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T11:36Z",
+      "confidence": "high"
+    },
+    {
+      "name": "wildfire_021",
+      "event_type": "wildfire",
+      "lat_deg": 29.1056,
+      "lon_deg": 9.6652,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T00:20Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_022",
+      "event_type": "wildfire",
+      "lat_deg": 31.0545,
+      "lon_deg": 8.0312,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_023",
+      "event_type": "wildfire",
+      "lat_deg": 31.1779,
+      "lon_deg": 8.1042,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_024",
+      "event_type": "wildfire",
+      "lat_deg": 31.6596,
+      "lon_deg": 6.0577,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_025",
+      "event_type": "wildfire",
+      "lat_deg": 31.7526,
+      "lon_deg": 5.2252,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_026",
+      "event_type": "wildfire",
+      "lat_deg": 31.789,
+      "lon_deg": 6.0654,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_027",
+      "event_type": "wildfire",
+      "lat_deg": 31.8501,
+      "lon_deg": 6.0496,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_028",
+      "event_type": "wildfire",
+      "lat_deg": 31.9619,
+      "lon_deg": 5.2156,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_029",
+      "event_type": "wildfire",
+      "lat_deg": 32.1354,
+      "lon_deg": 6.4688,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_030",
+      "event_type": "wildfire",
+      "lat_deg": 32.3543,
+      "lon_deg": 6.9763,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_031",
+      "event_type": "wildfire",
+      "lat_deg": 32.5138,
+      "lon_deg": 6.7105,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_032",
+      "event_type": "wildfire",
+      "lat_deg": 32.5466,
+      "lon_deg": 6.5373,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_033",
+      "event_type": "wildfire",
+      "lat_deg": 32.5545,
+      "lon_deg": 3.1679,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_034",
+      "event_type": "wildfire",
+      "lat_deg": 33.8719,
+      "lon_deg": 9.9896,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_035",
+      "event_type": "wildfire",
+      "lat_deg": 34.28,
+      "lon_deg": -6.574,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_036",
+      "event_type": "wildfire",
+      "lat_deg": 34.5971,
+      "lon_deg": -2.3454,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_037",
+      "event_type": "wildfire",
+      "lat_deg": 34.9818,
+      "lon_deg": 5.7126,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_038",
+      "event_type": "wildfire",
+      "lat_deg": 35.0974,
+      "lon_deg": 5.6477,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_039",
+      "event_type": "wildfire",
+      "lat_deg": 35.3132,
+      "lon_deg": -1.3438,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_040",
+      "event_type": "wildfire",
+      "lat_deg": 35.3507,
+      "lon_deg": 5.7618,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_041",
+      "event_type": "wildfire",
+      "lat_deg": 35.4606,
+      "lon_deg": -0.3939,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_042",
+      "event_type": "wildfire",
+      "lat_deg": 35.5336,
+      "lon_deg": -0.2738,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_043",
+      "event_type": "wildfire",
+      "lat_deg": 35.764,
+      "lon_deg": -0.2721,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_044",
+      "event_type": "wildfire",
+      "lat_deg": 35.8061,
+      "lon_deg": -0.2424,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_045",
+      "event_type": "wildfire",
+      "lat_deg": 35.8794,
+      "lon_deg": 4.4445,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_046",
+      "event_type": "wildfire",
+      "lat_deg": 36.0211,
+      "lon_deg": 0.125,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_047",
+      "event_type": "wildfire",
+      "lat_deg": 36.0862,
+      "lon_deg": 6.8059,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_048",
+      "event_type": "wildfire",
+      "lat_deg": 36.1274,
+      "lon_deg": 1.2404,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_049",
+      "event_type": "wildfire",
+      "lat_deg": 36.1417,
+      "lon_deg": 2.9282,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_050",
+      "event_type": "wildfire",
+      "lat_deg": 36.1775,
+      "lon_deg": 5.5691,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_051",
+      "event_type": "wildfire",
+      "lat_deg": 36.1808,
+      "lon_deg": 3.7478,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_052",
+      "event_type": "wildfire",
+      "lat_deg": 36.1957,
+      "lon_deg": 5.6358,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_053",
+      "event_type": "wildfire",
+      "lat_deg": 36.3329,
+      "lon_deg": 5.4811,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_054",
+      "event_type": "wildfire",
+      "lat_deg": 36.4317,
+      "lon_deg": 6.6198,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_055",
+      "event_type": "wildfire",
+      "lat_deg": 36.5981,
+      "lon_deg": 3.1385,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_056",
+      "event_type": "wildfire",
+      "lat_deg": 36.5982,
+      "lon_deg": 2.8797,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_057",
+      "event_type": "wildfire",
+      "lat_deg": 36.63,
+      "lon_deg": 3.2319,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_058",
+      "event_type": "wildfire",
+      "lat_deg": 36.6474,
+      "lon_deg": 3.0966,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_059",
+      "event_type": "wildfire",
+      "lat_deg": 36.7465,
+      "lon_deg": 6.2594,
+      "priority": 0.9,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T11:38Z",
+      "confidence": "high"
+    },
+    {
+      "name": "wildfire_060",
+      "event_type": "wildfire",
+      "lat_deg": 36.7499,
+      "lon_deg": 3.0817,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_061",
+      "event_type": "wildfire",
+      "lat_deg": 36.7638,
+      "lon_deg": 7.3089,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_062",
+      "event_type": "wildfire",
+      "lat_deg": 36.8671,
+      "lon_deg": 6.9848,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_063",
+      "event_type": "wildfire",
+      "lat_deg": 36.9678,
+      "lon_deg": -1.9055,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T01:58Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_064",
+      "event_type": "wildfire",
+      "lat_deg": 27.4077,
+      "lon_deg": 8.8379,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_065",
+      "event_type": "wildfire",
+      "lat_deg": 27.7489,
+      "lon_deg": 9.1487,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_066",
+      "event_type": "wildfire",
+      "lat_deg": 27.9267,
+      "lon_deg": 9.1052,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_067",
+      "event_type": "wildfire",
+      "lat_deg": 28.2009,
+      "lon_deg": -0.5181,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_068",
+      "event_type": "wildfire",
+      "lat_deg": 28.4686,
+      "lon_deg": 7.5046,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_069",
+      "event_type": "wildfire",
+      "lat_deg": 28.6078,
+      "lon_deg": 7.5133,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_070",
+      "event_type": "wildfire",
+      "lat_deg": 28.6849,
+      "lon_deg": 7.1918,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_071",
+      "event_type": "wildfire",
+      "lat_deg": 28.9728,
+      "lon_deg": 10.0404,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_072",
+      "event_type": "wildfire",
+      "lat_deg": 29.267,
+      "lon_deg": 6.4895,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_073",
+      "event_type": "wildfire",
+      "lat_deg": 29.6887,
+      "lon_deg": 6.6982,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_074",
+      "event_type": "wildfire",
+      "lat_deg": 30.1793,
+      "lon_deg": 7.6859,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_075",
+      "event_type": "wildfire",
+      "lat_deg": 30.2552,
+      "lon_deg": 8.0868,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_076",
+      "event_type": "wildfire",
+      "lat_deg": 30.6645,
+      "lon_deg": 8.1022,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_077",
+      "event_type": "wildfire",
+      "lat_deg": 30.8743,
+      "lon_deg": 5.6408,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_078",
+      "event_type": "wildfire",
+      "lat_deg": 30.8947,
+      "lon_deg": 5.5852,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_079",
+      "event_type": "wildfire",
+      "lat_deg": 32.9876,
+      "lon_deg": -7.1472,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T02:00Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "wildfire_080",
+      "event_type": "wildfire",
+      "lat_deg": 28.7361,
+      "lon_deg": 9.7903,
+      "priority": 0.35,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T11:36Z",
+      "confidence": "low"
+    },
+    {
+      "name": "wildfire_081",
+      "event_type": "wildfire",
+      "lat_deg": 36.3257,
+      "lon_deg": 10.0012,
+      "priority": 0.65,
+      "source": "FIRMS_VIIRS",
+      "detected_utc": "2026-06-12T11:38Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "flood_082",
+      "event_type": "flood",
+      "lat_deg": 34.9652,
+      "lon_deg": 1.9215,
+      "priority": 0.75,
+      "source": "GDACS",
+      "detected_utc": "Tue, 09 Jun 2026 05:54:46 GMT",
+      "confidence": "green"
+    },
+    {
+      "name": "hist_fire_kabylie_1",
+      "event_type": "wildfire",
+      "lat_deg": 36.55,
+      "lon_deg": 4.05,
+      "priority": 0.85,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "hist_fire_kabylie_2",
+      "event_type": "wildfire",
+      "lat_deg": 36.7,
+      "lon_deg": 3.85,
+      "priority": 0.82,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "hist_fire_jijel",
+      "event_type": "wildfire",
+      "lat_deg": 36.82,
+      "lon_deg": 5.77,
+      "priority": 0.8,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "hist_fire_bejaia",
+      "event_type": "wildfire",
+      "lat_deg": 36.75,
+      "lon_deg": 5.08,
+      "priority": 0.82,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "hist_fire_tlemcen",
+      "event_type": "wildfire",
+      "lat_deg": 34.88,
+      "lon_deg": -1.31,
+      "priority": 0.65,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "hist_fire_souk_ahras",
+      "event_type": "wildfire",
+      "lat_deg": 36.28,
+      "lon_deg": 7.95,
+      "priority": 0.69,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "hist_flood_seybouse",
+      "event_type": "flood",
+      "lat_deg": 36.45,
+      "lon_deg": 7.6,
+      "priority": 0.68,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "hist_flood_hodna",
+      "event_type": "flood",
+      "lat_deg": 35.4,
+      "lon_deg": 4.7,
+      "priority": 0.6,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    },
+    {
+      "name": "hist_quake_oranie",
+      "event_type": "earthquake",
+      "lat_deg": 35.7,
+      "lon_deg": -0.65,
+      "priority": 0.75,
+      "source": "historical_fallback",
+      "detected_utc": "2026-06-12T13:34Z",
+      "confidence": "nominal"
+    }
+  ]
+}

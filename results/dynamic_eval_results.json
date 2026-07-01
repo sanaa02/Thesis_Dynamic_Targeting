@@ -1,0 +1,182 @@
+{
+  "no_events": {
+    "label": "No events (baseline)",
+    "rate": 0.0,
+    "results": {
+      "greedy_dynamic_scout": {
+        "mean_reward": 0.5988345050801466,
+        "std_reward": 0.0,
+        "mean_cf_rate": 1.0,
+        "mean_dyn_success": 0.0,
+        "mean_delay_s": 0.0,
+        "mean_dyn_detected": 0.0,
+        "mean_dyn_imaged": 0.0,
+        "episodes": [
+          {
+            "total_reward": 0.5988345050801466,
+            "n_images": 2,
+            "cloud_free_rate": 1.0,
+            "dyn_success_rate": 0.0,
+            "n_dyn_imaged": 0
+          }
+        ]
+      },
+      "greedy_ignore_dynamic": {
+        "mean_reward": 0.5988345050801466,
+        "std_reward": 0.0,
+        "mean_cf_rate": 1.0,
+        "mean_dyn_success": 0.0,
+        "mean_delay_s": 0.0,
+        "mean_dyn_detected": 0.0,
+        "mean_dyn_imaged": 0.0,
+        "episodes": [
+          {
+            "total_reward": 0.5988345050801466,
+            "n_images": 2,
+            "cloud_free_rate": 1.0,
+            "dyn_success_rate": 0.0,
+            "n_dyn_imaged": 0
+          }
+        ]
+      },
+      "RL-PPO-dynamic": {
+        "mean_reward": 0.6845941592781719,
+        "std_reward": 0.0,
+        "mean_cf_rate": 1.0,
+        "mean_dyn_success": 0.0,
+        "mean_delay_s": 0.0,
+        "mean_dyn_detected": 0.0,
+        "mean_dyn_imaged": 0.0,
+        "episodes": [
+          {
+            "total_reward": 0.6845941592781719,
+            "n_images": 2,
+            "cloud_free_rate": 1.0,
+            "dyn_success_rate": 0.0,
+            "n_dyn_imaged": 0
+          }
+        ]
+      }
+    }
+  },
+  "sparse_events": {
+    "label": "Sparse events (0.5/hr)",
+    "rate": 0.5,
+    "results": {
+      "greedy_dynamic_scout": {
+        "mean_reward": 68.28690819008509,
+        "std_reward": 0.0,
+        "mean_cf_rate": 0.9615384615384616,
+        "mean_dyn_success": 1.0,
+        "mean_delay_s": 2287.6387887161736,
+        "mean_dyn_detected": 23.0,
+        "mean_dyn_imaged": 23.0,
+        "episodes": [
+          {
+            "total_reward": 68.28690819008509,
+            "n_images": 26,
+            "cloud_free_rate": 0.9615384615384616,
+            "dyn_success_rate": 1.0,
+            "n_dyn_imaged": 23
+          }
+        ]
+      },
+      "greedy_ignore_dynamic": {
+        "mean_reward": -1.4838950037601502,
+        "std_reward": 0.0,
+        "mean_cf_rate": 1.0,
+        "mean_dyn_success": 0.0,
+        "mean_delay_s": 0.0,
+        "mean_dyn_detected": 21.0,
+        "mean_dyn_imaged": 0.0,
+        "episodes": [
+          {
+            "total_reward": -1.4838950037601502,
+            "n_images": 2,
+            "cloud_free_rate": 1.0,
+            "dyn_success_rate": 0.0,
+            "n_dyn_imaged": 0
+          }
+        ]
+      },
+      "RL-PPO-dynamic": {
+        "mean_reward": 71.67389219391376,
+        "std_reward": 0.0,
+        "mean_cf_rate": 0.9629629629629629,
+        "mean_dyn_success": 1.0,
+        "mean_delay_s": 1927.6387887161738,
+        "mean_dyn_detected": 23.0,
+        "mean_dyn_imaged": 23.0,
+        "episodes": [
+          {
+            "total_reward": 71.67389219391376,
+            "n_images": 27,
+            "cloud_free_rate": 0.9629629629629629,
+            "dyn_success_rate": 1.0,
+            "n_dyn_imaged": 23
+          }
+        ]
+      }
+    }
+  },
+  "dense_events": {
+    "label": "Dense events (2.0/hr)",
+    "rate": 2.0,
+    "results": {
+      "greedy_dynamic_scout": {
+        "mean_reward": 265.45510933795106,
+        "std_reward": 0.0,
+        "mean_cf_rate": 0.9659090909090909,
+        "mean_dyn_success": 1.0,
+        "mean_delay_s": 1608.569248658447,
+        "mean_dyn_detected": 86.0,
+        "mean_dyn_imaged": 86.0,
+        "episodes": [
+          {
+            "total_reward": 265.45510933795106,
+            "n_images": 88,
+            "cloud_free_rate": 0.9659090909090909,
+            "dyn_success_rate": 1.0,
+            "n_dyn_imaged": 86
+          }
+        ]
+      },
+      "greedy_ignore_dynamic": {
+        "mean_reward": -2.380056909765561,
+        "std_reward": 0.0,
+        "mean_cf_rate": 1.0,
+        "mean_dyn_success": 0.0,
+        "mean_delay_s": 0.0,
+        "mean_dyn_detected": 28.0,
+        "mean_dyn_imaged": 0.0,
+        "episodes": [
+          {
+            "total_reward": -2.380056909765561,
+            "n_images": 2,
+            "cloud_free_rate": 1.0,
+            "dyn_success_rate": 0.0,
+            "n_dyn_imaged": 0
+          }
+        ]
+      },
+      "RL-PPO-dynamic": {
+        "mean_reward": 273.0949639860232,
+        "std_reward": 0.0,
+        "mean_cf_rate": 0.967391304347826,
+        "mean_dyn_success": 1.0,
+        "mean_delay_s": 1310.766780621676,
+        "mean_dyn_detected": 87.0,
+        "mean_dyn_imaged": 87.0,
+        "episodes": [
+          {
+            "total_reward": 273.0949639860232,
+            "n_images": 92,
+            "cloud_free_rate": 0.967391304347826,
+            "dyn_success_rate": 1.0,
+            "n_dyn_imaged": 87
+          }
+        ]
+      }
+    }
+  }
+}

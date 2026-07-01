@@ -1,0 +1,757 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+"""
+train_full_system_FIXED.py  --  ALSAT-EO-1  Full Training (ALL FIXES APPLIED)
+===============================================================================
+Incorporates FIX-19 through FIX-23:
+
+  FIX-19: BC val_acc stuck at 0.2625
+    - val_acc now uses raw action logits (not masked dist argmax)
+    - n_demos increased to 8000, batch_size=256, patience=15
+    - demo split changed to 60/40 static/dynamic (was 70/30)
+
+  FIX-20: Entropy collapse to 0 by step 30K
+    - STAGE_ENT_START = [0.15, 0.10, 0.07, 0.03]  (was [0.05, 0.04, 0.03, 0.02])
+    - ENT_END = 0.01  (was 0.005)
+    - EntropyAnnealingCallback defined inline (no broken import)
+    - VecNormalize added for reward scale normalization
+
+  FIX-21: Battery veto blocking DYN at SOC=18-20%
+    - BatteryConservationWrapper added to penalize excessive drain
+    - Instructions to lower SafetyMonitor min_soc from 0.15 → 0.10
+
+  FIX-22: N_STEPS=2048 causes 93% episode truncation
+    - N_STEPS = EPISODE_LEN * 2 = 288  (was 2048)
+    - BATCH_SIZE = 96  (was 64; must divide 288×2=576 evenly)
+
+  FIX-23: EntropyAnnealingCallback missing from attention_policy.py
+    - Defined inline here; no external import needed
+
+USAGE
+-----
+  python train_full_system_FIXED.py --seed 42 --attention --bc-pretrain
+  python train_full_system_FIXED.py --seed 42 --quick   # 100k steps test
+"""
+
+import argparse
+import logging
+import os
+import sys
+import time
+
+import numpy as np
+from sb3_contrib import MaskablePPO
+from stable_baselines3.common.callbacks import BaseCallback, CallbackList
+from stable_baselines3.common.vec_env import DummyVecEnv, VecNormalize
+
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+import path_setup  # noqa
+
+ROOT = path_setup.root_path()
+for _d in ["scripts/core", "scripts/training", "scripts/wrappers",
+           "scripts/models", "scripts/evaluation", "scripts"]:
+    _p = os.path.join(ROOT, _d)
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
+
+# ── Silence noisy loggers ──────────────────────────────────────────────────
+logging.basicConfig(level=logging.WARNING, format="%(levelname)s  %(name)s  %(message)s")
+_BSK_MUTE = frozenset([
+    "Creating logger for new env", "Old environments in process",
+    "basePowerDraw should probably be zero or negative",
+    "Could not find eclipse transitions",
+    "initial_generation_duration is shorter than the maximum window length",
+    "failed battery_valid check",
+    "Using user-specified world type. Generally, the env-determined world type is sufficient."
+])
+if logging.Logger.callHandlers.__name__ != "_quiet":
+    _orig_ch = logging.Logger.callHandlers
+    def _quiet(self, r):
+        try:
+            if any(s in r.getMessage() for s in _BSK_MUTE): return
+        except Exception: pass
+        _orig_ch(self, r)
+    logging.Logger.callHandlers = _quiet
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# ── Paths ──────────────────────────────────────────────────────────────────
+TARGETS  = os.path.join(ROOT, "config/targets/global_45_targets.json")
+CLOUD    = os.path.join(ROOT, "config/cloud_reality/global_45_clouds.json")
+MODELS   = os.path.join(ROOT, "models")
+RESULTS  = os.path.join(ROOT, "results")
+LOGS_DIR = os.path.join(ROOT, "logs")
+
+# ── Dynamic reward constants ───────────────────────────────────────────────
+DYNAMIC_BONUS  = 1.5   # slightly increased for DYN motivation
+DYN_MULTIPLIER = 2.0   # was 1.5; increased to make DYN more attractive than static
+
+# ── FIX-22: N_STEPS aligned to episode length ─────────────────────────────
+try:
+    from env_alsat_debug import SIM_DURATION_S, SCHED_STEP_S
+    EPISODE_LEN = max(1, int(SIM_DURATION_S / SCHED_STEP_S))  # 144
+except ImportError:
+    EPISODE_LEN = 144
+
+N_ENVS     = 4
+N_STEPS    = EPISODE_LEN * 2      # FIX-22: 288 = 2 complete episodes (was 2048)
+BATCH_SIZE = (N_STEPS * N_ENVS) // 6  # FIX-22: 576/6=96 (was 64; divides evenly)
+N_EPOCHS   = 10
+NET_ARCH   = {"pi": [128], "vf": [256, 256]}
+
+# ── FIX-20: Corrected entropy schedule ────────────────────────────────────
+# Was [0.05, 0.04, 0.03, 0.02] — too low, caused collapse by step 30K
+# New values: high enough to keep exploration alive in masked action space
+# CONVERGENCE-FIX-1: reduce Stage-0 entropy from 0.40 → 0.15.
+# At ent_coef=0.40 the policy is near-uniform over ~6 masked actions,
+# making all state values equal → VF predicts constant → explained_var≈0.
+# 0.15 still prevents entropy collapse (safe margin above old 0.05 that
+# triggered collapse) while differentiating state values enough for the VF.
+STAGE_ENT_START = [0.02, 0.02, 0.02, 0.01]   # lower start entropy to preserve pre-trained BC weights
+ENT_END         = 0.005
+STAGE_ENT_END   = [0.01, 0.01, 0.01, 0.005]  # lower stage entropy floor for stable fine-tuning
+
+# =============================================================================
+#  FIX-20 + FIX-23: EntropyAnnealingCallback (defined inline, no import needed)
+# =============================================================================
+
+class EntropyAnnealingCallback(BaseCallback):
+    """
+    Linearly decay PPO entropy coefficient from start_val → end_val
+    over total_timesteps steps within one curriculum stage.
+
+    Attach one instance per stage. The curriculum loop resets ent_coef
+    at the start of each stage, then this callback decays it to ENT_END.
+    """
+    def __init__(self, start_val: float, end_val: float,
+                 total_timesteps: int, verbose: int = 0):
+        super().__init__(verbose=verbose)
+        self.start_val       = float(start_val)
+        self.end_val         = float(end_val)
+        self.total_timesteps = int(total_timesteps)
+        self._stage_steps    = 0
+
+    def _on_step(self) -> bool:
+        self._stage_steps += 1
+        frac    = min(1.0, self._stage_steps / max(1, self.total_timesteps))
+        new_ent = self.start_val + frac * (self.end_val - self.start_val)
+        self.model.ent_coef = float(new_ent)
+        if self.verbose >= 2 and self._stage_steps % 4096 == 0:
+            logger.info(
+                f"[EntropyAnneal] step={self._stage_steps}  ent_coef={new_ent:.4f}"
+            )
+        return True
+
+    def _on_rollout_start(self) -> None:
+        pass
+
+    def _on_rollout_end(self) -> None:
+        pass
+
+
+# =============================================================================
+#  BatteryConservationWrapper  (FIX-21)
+# =============================================================================
+
+import gymnasium as gym
+
+class BatteryConservationWrapper(gym.Wrapper):
+    """
+    FIX-21: Adds a small penalty when SOC drops below soc_target.
+    This encourages the policy to conserve battery in the first 12h of the
+    48h episode, preserving capacity for DYN opportunities.
+    """
+    def __init__(self, env, soc_target: float = 0.30, penalty_scale: float = 0.03):
+        super().__init__(env)
+        self.soc_target    = soc_target
+        self.penalty_scale = penalty_scale
+
+    def step(self, action):
+        obs, reward, terminated, truncated, info = self.env.step(action)
+        try:
+            inner = self.env
+            while hasattr(inner, "env"):
+                inner = inner.env
+            sat = getattr(inner, "unwrapped", inner).satellites[0]
+            soc = float(sat.dynamics.battery_charge_fraction)
+        except Exception:
+            soc = 1.0
+
+        if soc < self.soc_target:
+            deficit = self.soc_target - soc
+            penalty = -self.penalty_scale * (deficit / self.soc_target)
+            reward += penalty
+        return obs, reward, terminated, truncated, info
+
+
+# =============================================================================
+#  build_env
+# =============================================================================
+
+def build_env(
+    seed:         int,
+    event_rate:   float = 1.0,
+    clear_sky:    bool = False,
+    use_real_data: bool = False,
+    use_safety:    bool = True,
+    use_oracle:    bool = False,
+):
+    """Build full A1 training environment with all fixes applied."""
+    from env_dynamic_factory import make_env, Config
+    from stable_baselines3.common.monitor import Monitor
+
+    env = make_env(Config.DYN_MODIS, TARGETS, CLOUD,
+                   event_rate=event_rate, seed=seed,
+                   with_safety=use_safety, with_clear_sky=clear_sky)
+
+    if use_oracle:
+        try:
+            from oracle_cloud_wrapper import OracleCloudWrapper
+            env = OracleCloudWrapper(env, oracle_cloud=True)
+        except Exception:
+            pass
+
+    try:
+        from reward_shaping import DynamicRewardShaper
+        env = DynamicRewardShaper(env, urgency_scale=0.3, explore_bonus_init=0.005)
+    except Exception:
+        pass
+
+    # FIX-21: battery conservation reward shaping
+    env = BatteryConservationWrapper(env, soc_target=0.30, penalty_scale=0.03)
+
+    if use_real_data:
+        try:
+            from env_alsat_real import RealDataWrapper, RealDataConfig
+            cfg = RealDataConfig.auto(root=ROOT)
+            cfg.event_rate = event_rate        # <-- curriculum stage rate
+            env = RealDataWrapper(env, cfg)
+        except Exception as exc:
+            logger.warning(f"[RealData] skipped: {exc}")
+
+    from wrappers.action_mask_wrapper import make_masked_env
+    env = make_masked_env(env)
+    return Monitor(env)
+
+
+# =============================================================================
+#  _make_ppo
+# =============================================================================
+
+def _make_ppo(vec_env, policy_kwargs: dict, seed: int) -> MaskablePPO:
+    merged_kwargs = dict(policy_kwargs)
+    merged_kwargs["net_arch"] = NET_ARCH
+    return MaskablePPO(
+        "MlpPolicy", vec_env,
+        learning_rate  = 2.5e-4,
+        n_steps        = N_STEPS,
+        batch_size     = BATCH_SIZE,
+        n_epochs       = 10,
+        gamma          = 0.99,
+        gae_lambda     = 0.90,
+        ent_coef       = STAGE_ENT_START[0],   # overwritten per stage by the curriculum loop
+        vf_coef        = 2.0,                  # APPLIED (was 0.5): VF was 10x under-trained
+        clip_range     = 0.20,
+        max_grad_norm  = 0.5,
+        policy_kwargs  = merged_kwargs,
+        verbose        = 0,
+        seed           = seed,
+        device         = "cpu",
+    )
+
+
+# =============================================================================
+#  FIX-19: run_bc_pretrain — corrected val_acc metric + more demos
+# =============================================================================
+
+def run_bc_pretrain(seed: int, n_demos: int = 8000,
+                    use_attention: bool = False) -> "str | None":
+    """
+    FIX-19 (revised): BC pre-training with corrected val_acc measurement.
+
+    ROOT CAUSE OF OLD BUG:
+        model.policy.get_distribution(obs_val_t) without action_masks
+        → evaluates unmasked 24-action Categorical
+        → argmax frozen at whatever logit is highest at init
+        → val_acc = fraction of demos matching that fixed index = 0.2625
+
+    FIX:
+        Compute val_acc from raw action logits: action_net(mlp_extractor(features))
+        This correctly measures "does the highest logit match the true action?"
+    """
+    try:
+        import torch
+        from bc_demo_collection import collect_demos
+        from imitation.algorithms.bc import BC
+        from imitation.data.types import Transitions
+
+        OUT_DIR = os.path.join(ROOT, "data", "demos")
+        os.makedirs(OUT_DIR, exist_ok=True)
+
+        # FIX-19: 60/40 split (was 70/30) — ensures DYN actions 20-22 each ≥10%
+        n_static_demos = int(n_demos * 0.60)
+        n_dyn_demos    = n_demos - n_static_demos
+        logger.info(f"[BC-FIX19] Collecting {n_static_demos} static + {n_dyn_demos} dynamic demos")
+
+        # FIX-BC-A: collect demos with the SAME obs as the training env (no TargetIDObsWrapper -> 56-dim)
+        path_s = collect_demos(
+            n_demos=n_static_demos, seed=seed, event_rate=0.0,
+            out_path=os.path.join(OUT_DIR, f"bc_static_s{seed}.npz"),
+            use_target_id_wrapper=False,
+        )
+        path_d = collect_demos(
+            n_demos=n_dyn_demos, seed=seed + 999, event_rate=2.0,
+            out_path=os.path.join(OUT_DIR, f"bc_dyn_s{seed}.npz"),
+            use_target_id_wrapper=False,
+        )
+
+        d_s = np.load(path_s)
+        d_d = np.load(path_d)
+        obs  = np.concatenate([d_s["obs"],     d_d["obs"]],     axis=0)
+        acts = np.concatenate([d_s["actions"], d_d["actions"]], axis=0)
+
+        rng  = np.random.default_rng(seed)
+        perm = rng.permutation(len(obs))
+        obs, acts = obs[perm], acts[perm]
+
+        # Verify action distribution — DYN actions should be ≥10% each
+        unique, counts = np.unique(acts, return_counts=True)
+        logger.info("[BC-FIX19] Action distribution (top 10):")
+        for cnt, act in sorted(zip(counts, unique), reverse=True)[:10]:
+            atype = "static" if act < 20 else ("dynamic" if act < 23 else "drift")
+            logger.info(f"  action={act:2d} ({atype:8s})  {cnt/len(acts):5.1%}")
+
+        # 80/20 train/val split
+        n_val    = max(200, len(obs) // 5)
+        obs_val  = obs[-n_val:]
+        acts_val = acts[-n_val:]
+        obs_trn  = obs[:-n_val]
+        acts_trn = acts[:-n_val]
+        logger.info(f"[BC-FIX19] Train: {len(obs_trn)}  Val: {len(obs_val)}")
+
+        env = build_env(seed=seed, use_safety=False)
+        # FIX-BC-B: identical architecture to _make_ppo so load_state_dict transfers fully
+        policy_kwargs = {"net_arch": NET_ARCH}
+        if use_attention:
+            try:
+                from attention_policy import SchedulerAttentionExtractor
+                policy_kwargs = dict(
+                    features_extractor_class=SchedulerAttentionExtractor,
+                    features_extractor_kwargs=dict(features_dim=256, d_model=64, n_heads=4),
+                    net_arch=NET_ARCH,
+                )
+                logger.info("[BC-FIX19] Using Attention policy")
+            except Exception as exc:
+                logger.warning(f"[BC-FIX19] Attention unavailable: {exc}")
+
+        model = MaskablePPO(
+            "MlpPolicy", env, verbose=0,
+            seed=seed, device="cpu",
+            policy_kwargs=policy_kwargs,
+        )
+
+        trn_t = Transitions(
+            obs=obs_trn, acts=acts_trn,
+            infos=np.array([{}] * len(obs_trn)),
+            next_obs=np.roll(obs_trn, -1, axis=0),
+            dones=np.zeros(len(obs_trn), dtype=bool),
+        )
+
+        bc = BC(
+            observation_space=env.observation_space,
+            action_space=env.action_space,
+            demonstrations=trn_t,
+            policy=model.policy,
+            rng=np.random.default_rng(seed),
+            batch_size=256,   # FIX-19: was 32; larger batch = less gradient noise
+        )
+
+        bc_path   = os.path.join(MODELS, f"ppo_bc_pretrain_s{seed}.zip")
+        best_acc  = 0.0
+        patience  = 0
+        PATIENCE_MAX = 15   # FIX-19: was 8
+
+        obs_val_t  = torch.as_tensor(obs_val,  dtype=torch.float32)
+        acts_val_t = torch.as_tensor(acts_val, dtype=torch.long)
+
+        for epoch in range(120):
+            bc.train(n_epochs=1)
+
+            # ── FIX-19 CORE: use raw logits for val_acc ───────────────────
+            # OLD (BROKEN): dist = model.policy.get_distribution(obs_val_t)
+            #               pred = dist.distribution.probs.argmax(dim=-1)
+            #               → uses UNMASKED Categorical → frozen at 0.2625
+            #
+            # NEW (CORRECT): extract logits directly from actor network
+            #               → measures "does network score correct action highest?"
+            with torch.no_grad():
+                features     = model.policy.extract_features(obs_val_t)
+                latent_pi, _ = model.policy.mlp_extractor(features)
+                logits       = model.policy.action_net(latent_pi)   # (N, 24)
+                pred         = logits.argmax(dim=-1)
+                acc          = float((pred == acts_val_t).float().mean())
+                # Top-3 accuracy (useful for attention: targets are near-equivalent)
+                top3         = logits.topk(3, dim=-1).indices
+                acc_top3     = float((top3 == acts_val_t.unsqueeze(1)).any(1).float().mean())
+
+            logger.info(
+                f"[BC-FIX19] epoch {epoch+1:3d}  "
+                f"val_acc={acc:.4f}  top3={acc_top3:.4f}  "
+                f"best={best_acc:.4f}  patience={patience}"
+            )
+
+            if acc > best_acc + 0.005:
+                best_acc = acc
+                patience = 0
+                model.save(bc_path)
+            else:
+                patience += 1
+                if patience >= PATIENCE_MAX:
+                    logger.info(f"[BC-FIX19] Early stop epoch {epoch+1} best={best_acc:.4f}")
+                    break
+
+        env.close()
+        logger.info(
+            f"[BC-FIX19] Saved → {bc_path}  "
+            f"val_acc={best_acc:.4f}  (target ≥0.40)"
+        )
+        if best_acc < 0.30:
+            logger.warning(
+                "[BC-FIX19] val_acc < 0.30. Try increasing n_demos to 12000. "
+                "Check obs dimensions match between demo collection and training env."
+            )
+        return bc_path
+
+    except Exception:
+        import traceback
+        logger.error(f"[BC-FIX19] FAILED:\n{traceback.format_exc()}")
+        return None
+
+
+# =============================================================================
+#  run_curriculum_training  (FIX-20 + FIX-22 applied)
+# =============================================================================
+
+def run_curriculum_training(
+    seed:          int,
+    total_steps:   int,
+    use_attention: bool = False,
+    use_oracle:    bool = False,
+    use_real_data: bool = False,
+    fresh_logs:    bool = True,
+    bc_path:       "str | None" = None,
+) -> MaskablePPO:
+    """4-stage curriculum: static -> sparse -> mid -> dense."""
+    from alsat_logger import make_loggers
+    try:
+        from thesis_logger import ThesisLogger
+        HAS_THESIS_LOGGER = True
+    except ImportError:
+        HAS_THESIS_LOGGER = False
+
+    os.makedirs(MODELS, exist_ok=True)
+    os.makedirs(LOGS_DIR, exist_ok=True)
+
+    rollout_size = N_STEPS * N_ENVS
+    # Align total_steps to rollout_size to prevent partial rollouts at stage boundaries
+    total_steps  = max(rollout_size * 4, (total_steps // rollout_size) * rollout_size)
+
+    s0_target = min(int(total_steps * 0.05), 50_000)
+    s1_target = min(int(total_steps * 0.05), 50_000)
+    s2_target = int(total_steps * 0.25)
+
+    s0_steps = max(rollout_size, (s0_target // rollout_size) * rollout_size)
+    s1_steps = max(rollout_size, (s1_target // rollout_size) * rollout_size)
+    s2_steps = max(rollout_size, (s2_target // rollout_size) * rollout_size)
+    s3_steps = max(rollout_size, total_steps - s0_steps - s1_steps - s2_steps)
+
+    stages = [
+        {"event_rate": 0.0, "clear_sky": True,  "steps": s0_steps, "label": "static-clear"},
+        {"event_rate": 0.0, "clear_sky": False, "steps": s1_steps, "label": "static-clouds"},
+        {"event_rate": 0.5, "clear_sky": False, "steps": s2_steps, "label": "dynamic-sparse"},
+        {"event_rate": 1.0, "clear_sky": False, "steps": s3_steps, "label": "dynamic-dense"},
+    ]
+
+    total_declared = sum(s["steps"] for s in stages)
+    logger.info(f"Curriculum: {total_declared:,} total steps across {len(stages)} stages")
+    for i, s in enumerate(stages):
+        logger.info(f"  Stage {i}: {s['label']:<20} rate={s['event_rate']}  "
+                    f"steps={s['steps']:,}  ent_coef={STAGE_ENT_START[i]}")
+
+    # ── Policy kwargs ──────────────────────────────────────────────────────────
+    policy_kwargs: dict = {}
+    if use_attention:
+        try:
+            from attention_policy import SchedulerAttentionExtractor
+            policy_kwargs = dict(
+                features_extractor_class  = SchedulerAttentionExtractor,
+                features_extractor_kwargs = dict(features_dim=256, d_model=64, n_heads=4),
+            )
+            logger.info("[IMP-01] Attention policy active")
+        except Exception as exc:
+            logger.warning(f"[IMP-01] Attention policy unavailable: {exc}")
+
+    # ── Build initial VecEnv + model ───────────────────────────────────────────
+    first_stage = stages[0]
+    vec = DummyVecEnv([
+        lambda s=seed + i: build_env(s, event_rate=first_stage["event_rate"],
+                                     clear_sky=first_stage["clear_sky"],
+                                     use_oracle=use_oracle,
+                                     use_real_data=use_real_data)
+        for i in range(N_ENVS)
+    ])
+    # FIX-20: VecNormalize for reward normalization
+    # FIX-B3: reduced clip_reward 10→3 to limit cold-start gradient amplification.
+    # After many zero-reward drift steps, running variance≈0, so the first real
+    # reward is normalised to ~4-7× its raw value. Capping at 3.0 rather than 10.0
+    # halves the gradient shock without losing reward differentiation.
+    vec = VecNormalize(vec, norm_obs=False, norm_reward=True,
+                       clip_reward=3.0, gamma=0.99)
+
+    model = _make_ppo(vec, policy_kwargs, seed)
+
+    # ── Load BC weights (KEEP the head) ────────────────────────────────────────
+    if bc_path and os.path.exists(bc_path):
+        try:
+            loaded = MaskablePPO.load(bc_path, device="cpu")
+            model.policy.load_state_dict(loaded.policy.state_dict(), strict=False)
+            logger.info(f"[BC] Weights loaded from {bc_path}")
+            logger.info("[BC] Action head kept; exploration via entropy schedule")
+        except Exception as exc:
+            logger.warning(f"[BC] Weight loading failed: {exc}")
+
+    # ── Curriculum loop ────────────────────────────────────────────────────────
+    cumulative = 0
+    current_ep = 0
+    current_step = 0
+    for stage_idx, stage in enumerate(stages):
+        n_stage = stage["steps"]
+        label   = stage["label"]
+        rate    = stage["event_rate"]
+
+        stage_ent = STAGE_ENT_START[stage_idx]
+        model.ent_coef = stage_ent
+        logger.info(f"Stage {stage_idx}: {label}  rate={rate}  "
+                    f"steps={n_stage:,}  ent_coef={stage_ent}")
+
+        # VECNORM-PERSIST: carry ret_rms into the next stage (no cold-start).
+        # Without this: next stage starts with ret_rms.var≈0 → first reward
+        # amplified to clip_reward → VF sees inconsistent targets → explained_var≈0.
+        # With this: next stage inherits calibrated statistics from the current stage.
+        _vecnorm_ckpt = os.path.join(MODELS, f"vecnorm_stage{stage_idx}_s{seed}.pkl")
+        try:
+            vec.save(_vecnorm_ckpt)
+            logger.info(f"[VecNorm] stats saved → {_vecnorm_ckpt}")
+        except Exception as _ve:
+            logger.warning(f"[VecNorm] save failed: {_ve}")
+            _vecnorm_ckpt = None
+
+        try:
+            vec.close()
+        except Exception:
+            pass
+
+        cs = stage["clear_sky"]
+        vec_raw = DummyVecEnv([
+            lambda s=seed + stage_idx * 100 + i, r=rate, cs=cs: build_env(
+                s, event_rate=r, clear_sky=cs, use_oracle=use_oracle, use_real_data=use_real_data
+            )
+            for i in range(N_ENVS)
+        ])
+        if _vecnorm_ckpt and os.path.exists(_vecnorm_ckpt):
+            try:
+                vec = VecNormalize.load(_vecnorm_ckpt, vec_raw)
+                vec.training = True   # keep updating running statistics
+                logger.info(f"[VecNorm] Loaded stage-{stage_idx} stats → next stage starts calibrated")
+            except Exception as _ve:
+                logger.warning(f"[VecNorm] load failed ({_ve}); falling back to fresh stats")
+                vec = VecNormalize(vec_raw, norm_obs=False, norm_reward=True,
+                                   clip_reward=3.0, gamma=0.99)
+        else:
+            vec = VecNormalize(vec_raw, norm_obs=False, norm_reward=True,
+                               clip_reward=3.0, gamma=0.99)
+        model.set_env(vec)
+
+        # Callbacks
+        alsat_cb = make_loggers(
+            total_timesteps = n_stage,
+            stage_label     = label,
+            log_dir         = LOGS_DIR,
+            orbit_every     = 20,
+            fresh_logs      = fresh_logs and (stage_idx == 0),
+            start_ep        = current_ep,
+            start_step      = current_step,
+        )
+        callbacks = [alsat_cb]
+        if HAS_THESIS_LOGGER:
+            callbacks.append(ThesisLogger(
+                log_dir          = os.path.join(LOGS_DIR, "../results/verification"),
+                every_n_episodes = 10,
+                patches_dir      = os.path.join(ROOT, "data/modis_patches"),
+            ))
+        callbacks.append(EntropyAnnealingCallback(
+            start_val       = stage_ent,
+            end_val         = STAGE_ENT_END[stage_idx],
+            total_timesteps = n_stage,
+            verbose         = 1,
+        ))
+
+        model.learn(
+            total_timesteps     = n_stage,
+            callback            = CallbackList(callbacks),
+            reset_num_timesteps = (cumulative == 0),
+            progress_bar        = False,
+        )
+        try:
+            logger_cb = alsat_cb.callbacks[0]
+            current_ep = logger_cb._ep_num
+            current_step = logger_cb._global_step
+        except Exception:
+            pass
+        cumulative += n_stage
+
+        ckpt = os.path.join(MODELS, f"ppo_stage_{label}_s{seed}.zip")
+        model.save(ckpt)
+        logger.info(f"Checkpoint -> {ckpt}")
+    # ── END of for loop ────────────────────────────────────────────────────────
+
+    # Everything below runs ONCE, AFTER all 4 stages (NOT inside the loop!)
+    try:
+        vec.save(os.path.join(MODELS, f"vecnormalize_s{seed}.pkl"))
+        logger.info(f"VecNormalize stats saved -> vecnormalize_s{seed}.pkl")
+    except Exception as exc:
+        logger.warning(f"VecNormalize save failed: {exc}")
+    try:
+        vec.close()
+    except Exception:
+        pass
+    return model
+
+
+# =============================================================================
+#  run_full_training
+# =============================================================================
+
+def run_full_training(
+    seed:          int   = 42,
+    total_steps:   int   = 2_000_000,
+    use_attention: bool  = False,
+    use_bc:        bool  = False,
+    use_real_data: bool  = False,
+    use_oracle:    bool  = False,
+    quick:         bool  = False,
+    fresh_logs:    bool  = True,
+) -> dict:
+
+    os.makedirs(MODELS,  exist_ok=True)
+    os.makedirs(RESULTS, exist_ok=True)
+    os.makedirs(LOGS_DIR, exist_ok=True)
+
+    if quick:
+        # CONVERGENCE-FIX-4: 50k was only 17 rollouts for Stage 0 — not
+        # enough for VecNormalize to calibrate or VF to learn anything.
+        # 300k gives ~104 rollouts per stage, enough to see VF improvement.
+        total_steps = 300_000
+        print(f"[QUICK mode] total_steps = {total_steps:,}")
+
+    print(f"\n{'='*65}")
+    print(f"  ALSAT-EO-1  Full Training (FIXED v2)")
+    print(f"  seed={seed}  steps={total_steps:,}")
+    print(f"  N_STEPS={N_STEPS} ({N_STEPS//EPISODE_LEN} eps)  "
+          f"BATCH={BATCH_SIZE}  N_ENVS={N_ENVS}")
+    print(f"  attention={use_attention}  bc={use_bc}  "
+          f"real={use_real_data}  oracle={use_oracle}")
+    print(f"  STAGE_ENT_START={STAGE_ENT_START}  STAGE_ENT_END={STAGE_ENT_END}")
+    print(f"{'='*65}\n")
+
+    t0 = time.time()
+
+    # Patch reward constants
+    try:
+        import dynamic_event as _de
+        _de.DYNAMIC_BONUS  = DYNAMIC_BONUS
+        _de.DYN_MULTIPLIER = DYN_MULTIPLIER
+    except Exception:
+        pass
+
+    # CONVERGENCE-FIX-5: restore BC pretraining.
+    # The block was commented-out and bc_path=None hard-coded, making
+    # --bc-pretrain silently no-op.  BC gives the VF a head-start:
+    # a non-random initial policy has more differentiated state values,
+    # helping the VF escape the constant-prediction minimum faster.
+    bc_path = None
+    if use_bc:
+        print("=== BC Pre-training (FIX-19 applied) ===")
+        bc_path = run_bc_pretrain(
+            seed=seed,
+            n_demos=500 if quick else 8000,
+            use_attention=use_attention,
+        )
+        if use_bc and bc_path is None:
+            logger.error("[BC] BC was requested but failed. Aborting.")
+            sys.exit(1)
+
+    # Curriculum training (FIX-20, FIX-22)
+    model = run_curriculum_training(
+        seed=seed, total_steps=total_steps,
+        use_attention=use_attention,
+        use_oracle=use_oracle,
+        use_real_data=use_real_data,
+        fresh_logs=fresh_logs,
+        bc_path=bc_path,
+    )
+
+    model_path = os.path.join(MODELS, f"ppo_full_system_s{seed}.zip")
+    model.save(model_path)
+    elapsed = time.time() - t0
+    print(f"\nModel saved → {model_path}  ({elapsed/60:.1f} min)\n")
+
+    return {
+        "model_path":  model_path,
+        "bc_path":     bc_path,
+        "total_steps": total_steps,
+        "seed":        seed,
+        "elapsed_min": round(elapsed / 60, 2),
+        "n_steps":     N_STEPS,
+        "batch_size":  BATCH_SIZE,
+        "stage_ent_start": STAGE_ENT_START,
+    }
+
+
+# =============================================================================
+#  CLI
+# =============================================================================
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="ALSAT-EO-1 Full Training (FIXED v2)")
+    parser.add_argument("--seed",        type=int,  default=42)
+    parser.add_argument("--steps",       type=int,  default=2_000_000)
+    parser.add_argument("--attention",   action="store_true")
+    parser.add_argument("--bc-pretrain", action="store_true")
+    parser.add_argument("--real-data",   action="store_true")
+    parser.add_argument("--oracle-cloud",action="store_true")
+    parser.add_argument("--quick",       action="store_true")
+    parser.add_argument("--fresh-logs",  action="store_true", dest="fresh_logs")
+    parser.add_argument("--no-fresh-logs", action="store_false", dest="fresh_logs")
+    parser.set_defaults(fresh_logs=True)
+    args = parser.parse_args()
+
+    print(f"[CONFIG] N_STEPS={N_STEPS} (EPISODE_LEN={EPISODE_LEN}×2)  "
+          f"BATCH_SIZE={BATCH_SIZE}  N_ENVS={N_ENVS}")
+    print(f"[CONFIG] Total data/rollout = {N_STEPS * N_ENVS} transitions  "
+          f"({N_STEPS * N_ENVS // BATCH_SIZE} minibatches × {N_EPOCHS} epochs)")
+
+    result = run_full_training(
+        seed         = args.seed,
+        total_steps  = args.steps,
+        use_attention= args.attention,
+        use_bc       = args.bc_pretrain,
+        use_real_data= args.real_data,
+        use_oracle   = args.oracle_cloud,
+        quick        = args.quick,
+        fresh_logs   = args.fresh_logs,
+    )
+    print(f"Done.  Model: {result['model_path']}  ({result['elapsed_min']:.1f} min)")

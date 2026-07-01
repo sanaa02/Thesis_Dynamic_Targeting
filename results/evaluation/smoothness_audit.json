@@ -1,0 +1,8 @@
+{
+  "action_coherence": 0.9737477368738684,
+  "slew_rate_variance": 0.0,
+  "settling_violations_count": 0,
+  "settling_violations_rate": 0.0,
+  "max_consecutive_switches": 1,
+  "total_steps_evaluated": 3315
+}
