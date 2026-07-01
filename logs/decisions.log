@@ -76426,3 +76426,681 @@
 [ep= 248 step=104 t=  74280s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
 [ep= 248 step=105 t=  75480s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
 [ep= 248 step=106 t=  76680s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=107 t=  77880s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=108 t=  79080s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=109 t=  79560s τ=  480s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=110 t=  79590s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=111 t=  79620s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=112 t=  79650s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=113 t=  79680s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=114 t=  79710s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=115 t=  79740s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=116 t=  79770s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=117 t=  79800s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=118 t=  79830s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=119 t=  79860s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=120 t=  79890s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=121 t=  79920s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=122 t=  79950s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=123 t=  79980s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=124 t=  80010s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=125 t=  80040s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=126 t=  80070s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=127 t=  80100s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=128 t=  80130s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=129 t=  80160s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=130 t=  80190s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=131 t=  80220s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=132 t=  80250s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=133 t=  80280s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=134 t=  80310s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=135 t=  80340s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=136 t=  80370s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=137 t=  80400s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=138 t=  80430s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=139 t=  80460s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=140 t=  80490s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=141 t=  80520s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=142 t=  80550s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=143 t=  80580s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=144 t=  80610s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=145 t=  80640s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=146 t=  80670s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=147 t=  80700s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=148 t=  80760s τ=   43s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=100.0%  valid_static= 0
+[ep= 248 step=149 t=  80790s τ=   30s] dynamic  slot=1 event=dyn_plume_0021 (cloud=11%)     r=+1.701  batt=100.0%  valid_static= 0  ★DYN lat=+23.89 lon=-0.23
+[ep= 248 step=150 t=  80820s τ=   30s] dynamic  slot=1 (no image / failed)                  r=-0.099  batt=100.0%  valid_static= 0
+[ep= 248 step=151 t=  80850s τ=   30s] dynamic  slot=1 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=152 t=  80880s τ=   30s] dynamic  slot=1 event=dyn_earthquake_0022 (cloud=39%) r=+1.144  batt=100.0%  valid_static= 0  ★DYN lat=+20.94 lon=-8.68
+[ep= 248 step=153 t=  80940s τ=   31s] dynamic  slot=0 event=dyn_earthquake_0023 (cloud=11%) r=+1.728  batt=100.0%  valid_static= 0  ★DYN lat=+18.99 lon=+2.26
+[ep= 248 step=154 t=  82140s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=155 t=  83340s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=156 t=  84540s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=157 t=  85620s τ= 1080s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=158 t=  85650s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=159 t=  85680s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=160 t=  85710s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=161 t=  85740s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=162 t=  85770s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=163 t=  85800s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=164 t=  85830s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=165 t=  85860s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=166 t=  85890s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=167 t=  85920s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=168 t=  85950s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=169 t=  85980s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=170 t=  86010s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=171 t=  86040s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=172 t=  86070s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=173 t=  86100s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=174 t=  86130s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=175 t=  86160s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=176 t=  86190s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=177 t=  86220s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=178 t=  86250s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=179 t=  86280s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=180 t=  86310s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=181 t=  86340s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=182 t=  86370s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=183 t=  86400s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=184 t=  86430s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=185 t=  86460s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=186 t=  86490s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=187 t=  86520s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=188 t=  86550s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=189 t=  86580s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=190 t=  86640s τ=   38s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=191 t=  86670s τ=   30s] dynamic  slot=0 event=dyn_eruption_0024 (cloud=18%)  r=+1.553  batt=100.0%  valid_static= 0  ★DYN lat=+21.68 lon=-4.50
+[ep= 248 step=192 t=  87870s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=193 t=  87930s τ=   49s] dynamic  slot=0 (no image / failed)                  r=-0.005  batt=100.0%  valid_static= 0
+[ep= 248 step=194 t=  87990s τ=   30s] dynamic  slot=0 event=dyn_eruption_0025 (cloud=41%)  r=+1.174  batt=100.0%  valid_static= 0  ★DYN lat=+33.88 lon=+0.93
+[ep= 248 step=195 t=  89190s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=196 t=  90390s τ= 1200s] drift                                                r=+0.000  batt=99.9%  valid_static= 0
+[ep= 248 step=197 t=  91590s τ= 1200s] drift                                                r=+0.000  batt=99.8%  valid_static= 0
+[ep= 248 step=198 t=  91860s τ=  270s] drift                                                r=+0.000  batt=99.9%  valid_static= 0
+[ep= 248 step=199 t=  91920s τ=   60s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=200 t=  91950s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=201 t=  91980s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=202 t=  92010s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=203 t=  92040s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=204 t=  92070s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=205 t=  92100s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=206 t=  92160s τ=   44s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=100.0%  valid_static= 0
+[ep= 248 step=207 t=  92190s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0026 (cloud=3%) r=+1.870  batt=100.0%  valid_static= 0  ★DYN lat=+33.15 lon=+2.24
+[ep= 248 step=208 t=  93390s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=209 t=  94590s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=210 t=  95790s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=211 t=  96990s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=212 t=  98190s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=213 t=  98250s τ=   49s] dynamic  slot=1 (no image / failed)                  r=-0.004  batt=100.0%  valid_static= 0
+[ep= 248 step=214 t=  98280s τ=   30s] dynamic  slot=1 event=dyn_flood_0028 (cloud=37%)     r=+1.344  batt=100.0%  valid_static= 0  ★DYN lat=+23.02 lon=+0.75
+[ep= 248 step=215 t=  98310s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=216 t=  98340s τ=   30s] dynamic  slot=0 event=dyn_flood_0027 (cloud=14%)     r=+1.629  batt=100.0%  valid_static= 0  ★DYN lat=+25.50 lon=-5.03
+[ep= 248 step=217 t=  99540s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=218 t= 100740s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=219 t= 101940s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=220 t= 103140s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=221 t= 103200s τ=   60s] dynamic  slot=1 (no image / failed)                  r=-0.006  batt=100.0%  valid_static= 0
+[ep= 248 step=222 t= 103260s τ=   32s] dynamic  slot=1 event=dyn_plume_0030 (cloud=33%)     r=+1.430  batt=100.0%  valid_static= 0  ★DYN lat=+33.40 lon=+3.01
+[ep= 248 step=223 t= 103290s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=224 t= 103320s τ=   30s] dynamic  slot=0 event=dyn_wildfire_0029 (cloud=37%)  r=+1.307  batt=100.0%  valid_static= 0  ★DYN lat=+31.62 lon=-5.17
+[ep= 248 step=225 t= 104520s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=226 t= 104580s τ=   46s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=227 t= 104610s τ=   30s] dynamic  slot=0 event=dyn_wildfire_0031 (cloud=32%)  r=+1.453  batt=100.0%  valid_static= 0  ★DYN lat=+30.10 lon=-1.47
+[ep= 248 step=228 t= 105810s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=229 t= 107010s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=230 t= 108210s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=231 t= 109410s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=232 t= 109470s τ=   55s] dynamic  slot=1 (no image / failed)                  r=-0.005  batt=100.0%  valid_static= 0
+[ep= 248 step=233 t= 109530s τ=   31s] dynamic  slot=1 event=dyn_plume_0032 (cloud=40%)     r=+1.276  batt=100.0%  valid_static= 0  ★DYN lat=+34.25 lon=+5.53
+[ep= 248 step=234 t= 109560s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0033 (cloud=36%) r=+1.344  batt=100.0%  valid_static= 0  ★DYN lat=+30.60 lon=+8.00
+[ep= 248 step=235 t= 110760s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=236 t= 111960s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=237 t= 113160s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=238 t= 114360s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=239 t= 115560s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=240 t= 116760s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=241 t= 116790s τ=   30s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=22
+[ep= 248 step=242 t= 116850s τ=   35s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=23
+[ep= 248 step=243 t= 116910s τ=   37s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=22
+[ep= 248 step=244 t= 116970s τ=   39s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=21
+[ep= 248 step=245 t= 117030s τ=   40s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=20
+[ep= 248 step=246 t= 117090s τ=   42s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=21
+[ep= 248 step=247 t= 117150s τ=   43s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=22
+[ep= 248 step=248 t= 117210s τ=   44s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=22
+[ep= 248 step=249 t= 117270s τ=   46s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=21
+[ep= 248 step=250 t= 117330s τ=   47s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=23
+[ep= 248 step=251 t= 117390s τ=   48s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=22
+[ep= 248 step=252 t= 117450s τ=   49s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=22
+[ep= 248 step=253 t= 117510s τ=   50s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=22
+[ep= 248 step=254 t= 117570s τ=   51s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=20
+[ep= 248 step=255 t= 117630s τ=   52s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=24
+[ep= 248 step=256 t= 117690s τ=   53s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=23
+[ep= 248 step=257 t= 117750s τ=   54s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=22
+[ep= 248 step=258 t= 117810s τ=   55s] static   target=Tizi Ouzou (idx=4) (failed/slewing)  r=+0.000  batt=100.0%  valid_static=21
+[ep= 248 step=259 t= 117850s τ=   56s] static   target=Tizi Ouzou (idx=4) ✓                 r=+3.470  batt=100.0%  valid_static=21
+[ep= 248 step=260 t= 117870s τ=   37s] static   target=Tunis (idx=19) ✓                     r=+2.534  batt=100.0%  valid_static=21
+[ep= 248 step=261 t= 117880s τ=   30s] static   target=Boumerdes (idx=1) ✓                  r=+4.904  batt=100.0%  valid_static=19
+[ep= 248 step=262 t= 117890s τ=   30s] static   target=Bechar (idx=23) ✓                    r=+2.219  batt=100.0%  valid_static=19
+[ep= 248 step=263 t= 117900s τ=   30s] static   target=Chlef (idx=5) ✓                      r=+2.632  batt=100.0%  valid_static=17
+[ep= 248 step=264 t= 117910s τ=   30s] static   target=Souk Ahras (idx=13) ✓                r=+3.437  batt=100.0%  valid_static=18
+[ep= 248 step=265 t= 117920s τ=   30s] static   target=Msila (idx=9) ✓                      r=+3.398  batt=100.0%  valid_static=16
+[ep= 248 step=266 t= 117930s τ=   30s] static   target=Setif (idx=7) ✓                      r=+3.876  batt=100.0%  valid_static=15
+[ep= 248 step=267 t= 117940s τ=   30s] static   target=Mostaganem (idx=6) ✓                 r=+3.693  batt=100.0%  valid_static=15
+[ep= 248 step=268 t= 117950s τ=   30s] static   target=Fez (idx=24) ✓                       r=+2.582  batt=100.0%  valid_static=15
+[ep= 248 step=269 t= 117960s τ=   30s] static   target=Moscow (idx=37) ✓                    r=+1.323  batt=100.0%  valid_static=12
+[ep= 248 step=270 t= 117970s τ=   30s] static   target=Constantine (idx=11) ✓               r=+2.582  batt=100.0%  valid_static=11
+[ep= 248 step=271 t= 117980s τ=   30s] static   target=Djelfa (idx=8) ✓                     r=+3.871  batt=100.0%  valid_static=10
+[ep= 248 step=272 t= 117990s τ=   30s] static   target=London (idx=31) ✓                    r=+1.781  batt=100.0%  valid_static= 8
+[ep= 248 step=273 t= 118000s τ=   30s] static   target=Athens (idx=32) (cloudy/penalty)     r=-0.032  batt=100.0%  valid_static= 9
+[ep= 248 step=274 t= 118010s τ=   30s] static   target=Laghouat (idx=12) ✓                  r=+2.763  batt=100.0%  valid_static= 6
+[ep= 248 step=275 t= 118020s τ=   30s] static   target=Ghardaia (idx=17) ✓                  r=+3.137  batt=100.0%  valid_static= 6
+[ep= 248 step=276 t= 118030s τ=   30s] static   target=Annaba (idx=16) ✓                    r=+2.157  batt=100.0%  valid_static= 6
+[ep= 248 step=277 t= 118040s τ=   30s] static   target=Oran (idx=14) ✓                      r=+2.259  batt=100.0%  valid_static= 5
+[ep= 248 step=278 t= 118050s τ=   30s] static   target=Paris (idx=30) ✓                     r=+1.972  batt=100.0%  valid_static= 5
+[ep= 248 step=279 t= 119250s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 3
+[ep= 248 step=280 t= 120450s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=281 t= 120540s τ=   61s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=282 t= 120570s τ=   30s] dynamic  slot=0 event=dyn_wildfire_0034 (cloud=35%)  r=+1.370  batt=100.0%  valid_static= 0  ★DYN lat=+25.06 lon=+7.83
+[ep= 248 step=283 t= 121770s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=284 t= 122970s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=285 t= 123030s τ=   41s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 1
+[ep= 248 step=286 t= 123090s τ=   31s] dynamic  slot=1 event=dyn_plume_0036 (cloud=18%)     r=+1.607  batt=100.0%  valid_static= 1  ★DYN lat=+34.22 lon=+11.73
+[ep= 248 step=287 t= 123150s τ=   47s] static   target=Los Angeles (idx=43) (failed/slewing) r=+0.000  batt=100.0%  valid_static= 1
+[ep= 248 step=288 t= 123210s τ=   48s] static   target=Los Angeles (idx=43) (failed/slewing) r=+0.000  batt=100.0%  valid_static= 1
+[ep= 248 step=289 t= 123270s τ=   48s] static   target=Los Angeles (idx=43) (failed/slewing) r=+0.000  batt=100.0%  valid_static= 1
+[ep= 248 step=290 t= 123330s τ=   49s] static   target=Los Angeles (idx=43) (failed/slewing) r=+0.000  batt=100.0%  valid_static= 1
+[ep= 248 step=291 t= 123390s τ=   49s] static   target=Los Angeles (idx=43) (failed/slewing) r=+0.000  batt=100.0%  valid_static= 1
+[ep= 248 step=292 t= 123450s τ=   50s] static   target=Los Angeles (idx=43) (failed/slewing) r=+0.000  batt=100.0%  valid_static= 1
+[ep= 248 step=293 t= 123510s τ=   50s] static   target=Los Angeles (idx=43) (failed/slewing) r=+0.000  batt=100.0%  valid_static= 1
+[ep= 248 step=294 t= 123530s τ=   41s] static   target=Los Angeles (idx=43) ✓               r=+0.883  batt=100.0%  valid_static= 1
+[ep= 248 step=295 t= 123560s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=296 t= 123590s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=297 t= 123620s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=298 t= 123650s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=299 t= 123680s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=300 t= 123710s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=301 t= 123740s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=302 t= 123770s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=303 t= 123800s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=304 t= 123830s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=305 t= 123860s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=306 t= 123890s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=307 t= 123920s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=308 t= 123950s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=309 t= 123980s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=310 t= 124010s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=311 t= 124040s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=312 t= 124070s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=313 t= 124100s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=314 t= 124130s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=315 t= 124160s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=316 t= 125360s τ= 1200s] drift                                                r=+0.000  batt=99.8%  valid_static= 0
+[ep= 248 step=317 t= 126560s τ= 1200s] drift                                                r=+0.000  batt=99.8%  valid_static= 0
+[ep= 248 step=318 t= 126650s τ=   60s] dynamic  slot=1 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=319 t= 126680s τ=   30s] dynamic  slot=1 event=dyn_earthquake_0037 (cloud=11%) r=+1.783  batt=100.0%  valid_static= 0  ★DYN lat=+32.98 lon=-7.22
+[ep= 248 step=320 t= 126710s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=321 t= 126740s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0035 (cloud=11%) r=+1.574  batt=100.0%  valid_static= 0  ★DYN lat=+26.44 lon=-0.46
+[ep= 248 step=322 t= 127940s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=323 t= 129140s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=324 t= 130340s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=325 t= 131540s τ= 1200s] drift                                                r=+0.000  batt=99.9%  valid_static= 0
+[ep= 248 step=326 t= 132740s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=327 t= 132800s τ=   59s] dynamic  slot=1 (no image / failed)                  r=-0.007  batt=100.0%  valid_static= 0
+[ep= 248 step=328 t= 132860s τ=   34s] dynamic  slot=1 event=dyn_flood_0038 (cloud=14%)     r=+1.582  batt=100.0%  valid_static= 0  ★DYN lat=+33.24 lon=-3.86
+[ep= 248 step=329 t= 132890s τ=   30s] dynamic  slot=0 event=dyn_flood_0039 (cloud=25%)     r=+1.481  batt=100.0%  valid_static= 0  ★DYN lat=+30.70 lon=-8.61
+[ep= 248 step=330 t= 134090s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=331 t= 134150s τ=   40s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=100.0%  valid_static= 0
+[ep= 248 step=332 t= 134180s τ=   30s] dynamic  slot=1 event=dyn_wildfire_0040 (cloud=26%)  r=+1.509  batt=100.0%  valid_static= 0  ★DYN lat=+28.44 lon=+4.85
+[ep= 248 step=333 t= 134210s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0041 (cloud=29%) r=+1.384  batt=100.0%  valid_static= 0  ★DYN lat=+30.37 lon=+6.70
+[ep= 248 step=334 t= 135410s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=335 t= 136610s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=336 t= 137810s τ= 1200s] drift                                                r=+0.000  batt=99.9%  valid_static= 0
+[ep= 248 step=337 t= 139010s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=338 t= 140210s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=339 t= 141410s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=340 t= 142610s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=341 t= 143810s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=342 t= 145010s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=343 t= 145070s τ=   55s] dynamic  slot=0 (no image / failed)                  r=-0.005  batt=100.0%  valid_static= 0
+[ep= 248 step=344 t= 145100s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=345 t= 145130s τ=   30s] dynamic  slot=0 event=dyn_wildfire_0042 (cloud=15%)  r=+1.673  batt=100.0%  valid_static= 0  ★DYN lat=+19.69 lon=+0.42
+[ep= 248 step=346 t= 146330s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=347 t= 147530s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=348 t= 148730s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=349 t= 149930s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=350 t= 151070s τ= 1140s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=351 t= 151130s τ=   48s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=100.0%  valid_static= 0
+[ep= 248 step=352 t= 151160s τ=   30s] dynamic  slot=0 event=dyn_wildfire_0043 (cloud=30%)  r=+1.308  batt=100.0%  valid_static= 0  ★DYN lat=+22.70 lon=-3.10
+[ep= 248 step=353 t= 152360s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=354 t= 153560s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=355 t= 154760s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=356 t= 155960s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=357 t= 156620s τ=  660s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=358 t= 156650s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=359 t= 156680s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=360 t= 156710s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=361 t= 156740s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=362 t= 156770s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=363 t= 156800s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=364 t= 156830s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=365 t= 156860s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=366 t= 156890s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=367 t= 156920s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=368 t= 156950s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=369 t= 156980s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=370 t= 157010s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=371 t= 157040s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=372 t= 157070s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=373 t= 157100s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=374 t= 157130s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=375 t= 157160s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=376 t= 157190s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=377 t= 157250s τ=   36s] dynamic  slot=2 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=378 t= 157310s τ=   32s] dynamic  slot=1 event=dyn_plume_0044 (cloud=54%)     r=+1.024  batt=100.0%  valid_static= 0  ★DYN lat=+29.66 lon=-3.44
+[ep= 248 step=379 t= 157340s τ=   30s] dynamic  slot=1 (no image / failed)                  r=-0.099  batt=100.0%  valid_static= 0
+[ep= 248 step=380 t= 157370s τ=   30s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=100.0%  valid_static= 0
+[ep= 248 step=381 t= 157400s τ=   30s] dynamic  slot=1 event=dyn_eruption_0046 (cloud=14%)  r=+1.826  batt=100.0%  valid_static= 0  ★DYN lat=+35.01 lon=+4.89
+[ep= 248 step=382 t= 157430s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 248 step=383 t= 157460s τ=   30s] dynamic  slot=0 event=dyn_eruption_0045 (cloud=73%)  r=-0.050  batt=100.0%  valid_static= 0  ★DYN lat=+30.73 lon=+8.95
+[ep= 248 step=384 t= 158660s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=385 t= 159860s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=386 t= 161060s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=387 t= 162260s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=388 t= 163460s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=389 t= 164660s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=390 t= 165860s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=391 t= 167060s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=392 t= 168260s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=393 t= 169460s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=394 t= 170660s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=395 t= 170720s τ=   50s] dynamic  slot=0 (no image / failed)                  r=-0.005  batt=100.0%  valid_static= 0
+[ep= 248 step=396 t= 170780s τ=   31s] dynamic  slot=0 event=dyn_earthquake_0047 (cloud=10%) r=+1.735  batt=100.0%  valid_static= 0  ★DYN lat=+24.06 lon=-3.13
+[ep= 248 step=397 t= 171980s τ= 1200s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 248 step=398 t= 172070s τ=   67s] static   target=Algiers (idx=0) (failed/slewing)     r=+0.000  batt=100.0%  valid_static= 7
+[ep= 248 step=399 t= 172160s τ=   70s] static   target=Batna (idx=10) (failed/slewing)      r=+0.000  batt=100.0%  valid_static= 7
+[ep= 248 step=400 t= 172250s τ=   70s] static   target=Algiers (idx=0) (failed/slewing)     r=+0.000  batt=100.0%  valid_static= 5
+[ep= 248 step=401 t= 172340s τ=   71s] static   target=Toronto (idx=40) (failed/slewing)    r=+0.000  batt=100.0%  valid_static= 7
+[ep= 248 step=402 t= 172430s τ=   72s] static   target=Batna (idx=10) (failed/slewing)      r=+0.000  batt=100.0%  valid_static= 6
+[ep= 248 step=403 t= 172520s τ=   73s] static   target=Batna (idx=10) (failed/slewing)      r=+0.000  batt=100.0%  valid_static= 6
+[ep= 248 step=404 t= 172610s τ=   74s] static   target=Algiers (idx=0) (failed/slewing)     r=+0.000  batt=100.0%  valid_static= 5
+[ep= 248 step=405 t= 172700s τ=   74s] static   target=Batna (idx=10) (failed/slewing)      r=+0.000  batt=100.0%  valid_static= 7
+[ep= 248 step=406 t= 172790s τ=   75s] static   target=Batna (idx=10) (failed/slewing)      r=+0.000  batt=100.0%  valid_static= 6
+[ep= 248 step=407 t= 172800s τ=   75s] static   target=Batna (idx=10) (cloudy/penalty)      r=-5.000  batt=100.0%  valid_static= 6
+  ↳ EPISODE END  decisions=407 substeps=407  reward=+118.588  static=20/45 (44%)  dyn_suc=98% (46/47)  batt=100.0%
+[ep= 249 step=  1 t=   1200s τ= 1200s] drift                                                r=+0.000  batt=99.8%  valid_static= 0
+[ep= 249 step=  2 t=   2400s τ= 1200s] drift                                                r=+0.000  batt=99.7%  valid_static= 0
+[ep= 249 step=  3 t=   2460s τ=   57s] dynamic  slot=1 (no image / failed)                  r=-0.007  batt=100.0%  valid_static= 0
+[ep= 249 step=  4 t=   2520s τ=   34s] dynamic  slot=1 event=dyn_plume_0002 (cloud=55%)     r=+1.092  batt=100.0%  valid_static= 0  ★DYN lat=+34.01 lon=+2.48
+[ep= 249 step=  5 t=   2550s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 249 step=  6 t=   2580s τ=   30s] dynamic  slot=0 event=dyn_plume_0001 (cloud=62%)     r=-0.045  batt=100.0%  valid_static= 0  ★DYN lat=+34.33 lon=-7.72
+[ep= 249 step=  7 t=   3780s τ= 1200s] drift                                                r=+0.000  batt=99.8%  valid_static= 0
+[ep= 249 step=  8 t=   4980s τ= 1200s] drift                                                r=+0.000  batt=99.6%  valid_static= 0
+[ep= 249 step=  9 t=   5040s τ=   43s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=99.6%  valid_static= 0
+[ep= 249 step= 10 t=   5070s τ=   30s] dynamic  slot=0 event=dyn_eruption_0003 (cloud=24%)  r=+1.523  batt=99.6%  valid_static= 0  ★DYN lat=+33.65 lon=-7.93
+[ep= 249 step= 11 t=   6270s τ= 1200s] drift                                                r=+0.000  batt=99.5%  valid_static= 0
+[ep= 249 step= 12 t=   7470s τ= 1200s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step= 13 t=   8670s τ= 1200s] drift                                                r=+0.000  batt=99.1%  valid_static= 0
+[ep= 249 step= 14 t=   9870s τ= 1200s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step= 15 t=  11070s τ= 1200s] drift                                                r=+0.000  batt=98.8%  valid_static= 0
+[ep= 249 step= 16 t=  12270s τ= 1200s] drift                                                r=+0.000  batt=98.6%  valid_static= 0
+[ep= 249 step= 17 t=  13470s τ= 1200s] drift                                                r=+0.000  batt=98.4%  valid_static= 0
+[ep= 249 step= 18 t=  14670s τ= 1200s] drift                                                r=+0.000  batt=98.3%  valid_static= 0
+[ep= 249 step= 19 t=  15870s τ= 1200s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 20 t=  17070s τ= 1200s] drift                                                r=+0.000  batt=97.9%  valid_static= 0
+[ep= 249 step= 21 t=  18270s τ= 1200s] drift                                                r=+0.000  batt=97.8%  valid_static= 0
+[ep= 249 step= 22 t=  19470s τ= 1200s] drift                                                r=+0.000  batt=97.6%  valid_static= 0
+[ep= 249 step= 23 t=  20670s τ= 1200s] drift                                                r=+0.000  batt=97.4%  valid_static= 0
+[ep= 249 step= 24 t=  21870s τ= 1200s] drift                                                r=+0.000  batt=97.2%  valid_static= 0
+[ep= 249 step= 25 t=  21930s τ=   44s] dynamic  slot=1 (no image / failed)                  r=-0.004  batt=97.3%  valid_static= 0
+[ep= 249 step= 26 t=  21960s τ=   30s] dynamic  slot=1 event=dyn_earthquake_0004 (cloud=15%) r=+1.710  batt=97.4%  valid_static= 0  ★DYN lat=+27.69 lon=-3.56
+[ep= 249 step= 27 t=  22020s τ=   32s] dynamic  slot=0 event=dyn_earthquake_0005 (cloud=27%) r=+1.564  batt=97.8%  valid_static= 0  ★DYN lat=+20.06 lon=+10.43
+[ep= 249 step= 28 t=  23220s τ= 1200s] drift                                                r=+0.000  batt=97.7%  valid_static= 0
+[ep= 249 step= 29 t=  24420s τ= 1200s] drift                                                r=+0.000  batt=97.6%  valid_static= 0
+[ep= 249 step= 30 t=  25620s τ= 1200s] drift                                                r=+0.000  batt=97.4%  valid_static= 0
+[ep= 249 step= 31 t=  25710s τ=   65s] dynamic  slot=1 (no image / failed)                  r=-0.004  batt=99.4%  valid_static= 0
+[ep= 249 step= 32 t=  25740s τ=   30s] dynamic  slot=1 event=dyn_plume_0007 (cloud=60%)     r=+0.964  batt=100.0%  valid_static= 0  ★DYN lat=+31.82 lon=-6.34
+[ep= 249 step= 33 t=  25800s τ=   31s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=100.0%  valid_static= 0
+[ep= 249 step= 34 t=  25830s τ=   30s] dynamic  slot=1 event=dyn_plume_0006 (cloud=12%)     r=+1.686  batt=100.0%  valid_static= 0  ★DYN lat=+26.73 lon=+3.63
+[ep= 249 step= 35 t=  25860s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 249 step= 36 t=  25890s τ=   30s] dynamic  slot=0 event=dyn_plume_0008 (cloud=46%)     r=+1.068  batt=100.0%  valid_static= 0  ★DYN lat=+34.90 lon=+6.93
+[ep= 249 step= 37 t=  27090s τ= 1200s] drift                                                r=+0.000  batt=99.8%  valid_static= 0
+[ep= 249 step= 38 t=  28290s τ= 1200s] drift                                                r=+0.000  batt=99.7%  valid_static= 0
+[ep= 249 step= 39 t=  28350s τ=   38s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=99.6%  valid_static= 0
+[ep= 249 step= 40 t=  28380s τ=   30s] dynamic  slot=0 event=dyn_flood_0009 (cloud=15%)     r=+1.721  batt=99.6%  valid_static= 0  ★DYN lat=+32.65 lon=-5.07
+[ep= 249 step= 41 t=  29580s τ= 1200s] drift                                                r=+0.000  batt=99.5%  valid_static= 0
+[ep= 249 step= 42 t=  30780s τ= 1200s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step= 43 t=  31980s τ= 1200s] drift                                                r=+0.000  batt=99.1%  valid_static= 0
+[ep= 249 step= 44 t=  33120s τ= 1140s] drift                                                r=+0.000  batt=99.0%  valid_static= 0
+[ep= 249 step= 45 t=  33180s τ=   48s] dynamic  slot=0 (no image / failed)                  r=-0.004  batt=99.2%  valid_static= 0
+[ep= 249 step= 46 t=  33210s τ=   30s] dynamic  slot=0 event=dyn_plume_0010 (cloud=22%)     r=+1.434  batt=99.6%  valid_static= 0  ★DYN lat=+35.86 lon=+9.35
+[ep= 249 step= 47 t=  34410s τ= 1200s] drift                                                r=+0.000  batt=99.6%  valid_static= 0
+[ep= 249 step= 48 t=  34470s τ=   45s] dynamic  slot=1 (no image / failed)                  r=-0.004  batt=99.6%  valid_static= 0
+[ep= 249 step= 49 t=  34500s τ=   30s] dynamic  slot=1 event=dyn_flood_0011 (cloud=30%)     r=+1.386  batt=99.6%  valid_static= 0  ★DYN lat=+33.55 lon=+4.66
+[ep= 249 step= 50 t=  34560s τ=   30s] dynamic  slot=0 event=dyn_plume_0012 (cloud=37%)     r=+1.242  batt=99.6%  valid_static= 0  ★DYN lat=+23.58 lon=+4.42
+[ep= 249 step= 51 t=  35760s τ= 1200s] drift                                                r=+0.000  batt=99.4%  valid_static= 0
+[ep= 249 step= 52 t=  36960s τ= 1200s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step= 53 t=  38160s τ= 1200s] drift                                                r=+0.000  batt=99.1%  valid_static= 0
+[ep= 249 step= 54 t=  39360s τ= 1200s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step= 55 t=  40560s τ= 1200s] drift                                                r=+0.000  batt=98.7%  valid_static= 0
+[ep= 249 step= 56 t=  41760s τ= 1200s] drift                                                r=+0.000  batt=98.6%  valid_static= 0
+[ep= 249 step= 57 t=  41820s τ=   58s] dynamic  slot=0 (no image / failed)                  r=-0.007  batt=98.5%  valid_static= 0
+[ep= 249 step= 58 t=  41880s τ=   33s] dynamic  slot=0 event=dyn_plume_0013 (cloud=43%)     r=+1.215  batt=98.5%  valid_static= 0  ★DYN lat=+31.97 lon=+10.72
+[ep= 249 step= 59 t=  43080s τ= 1200s] drift                                                r=+0.000  batt=98.4%  valid_static= 0
+[ep= 249 step= 60 t=  44280s τ= 1200s] drift                                                r=+0.000  batt=98.2%  valid_static= 0
+[ep= 249 step= 61 t=  44580s τ=  300s] drift                                                r=+0.000  batt=98.2%  valid_static= 0
+[ep= 249 step= 62 t=  44610s τ=   30s] drift                                                r=+0.000  batt=98.2%  valid_static= 0
+[ep= 249 step= 63 t=  44640s τ=   30s] drift                                                r=+0.000  batt=98.2%  valid_static= 0
+[ep= 249 step= 64 t=  44670s τ=   30s] drift                                                r=+0.000  batt=98.2%  valid_static= 0
+[ep= 249 step= 65 t=  44700s τ=   30s] drift                                                r=+0.000  batt=98.2%  valid_static= 0
+[ep= 249 step= 66 t=  44730s τ=   30s] drift                                                r=+0.000  batt=98.2%  valid_static= 0
+[ep= 249 step= 67 t=  44760s τ=   30s] drift                                                r=+0.000  batt=98.2%  valid_static= 0
+[ep= 249 step= 68 t=  44790s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 69 t=  44820s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 70 t=  44850s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 71 t=  44880s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 72 t=  44910s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 73 t=  44940s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 74 t=  44970s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 75 t=  45000s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 76 t=  45030s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 77 t=  45060s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 78 t=  45090s τ=   30s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step= 79 t=  45150s τ=   41s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=98.1%  valid_static= 0
+[ep= 249 step= 80 t=  45180s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0014 (cloud=26%) r=+1.531  batt=98.1%  valid_static= 0  ★DYN lat=+27.60 lon=-2.74
+[ep= 249 step= 81 t=  46380s τ= 1200s] drift                                                r=+0.000  batt=97.9%  valid_static= 0
+[ep= 249 step= 82 t=  47580s τ= 1200s] drift                                                r=+0.000  batt=97.7%  valid_static= 0
+[ep= 249 step= 83 t=  48780s τ= 1200s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step= 84 t=  49980s τ= 1200s] drift                                                r=+0.000  batt=97.4%  valid_static= 0
+[ep= 249 step= 85 t=  50280s τ=  300s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 86 t=  50310s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 87 t=  50340s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 88 t=  50370s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 89 t=  50400s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 90 t=  50430s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 91 t=  50460s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 92 t=  50490s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 93 t=  50520s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 94 t=  50550s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 95 t=  50580s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 96 t=  50610s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 97 t=  50640s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 98 t=  50670s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step= 99 t=  50700s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step=100 t=  50730s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step=101 t=  50760s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step=102 t=  50790s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step=103 t=  50820s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step=104 t=  50850s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step=105 t=  50880s τ=   30s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step=106 t=  50910s τ=   30s] drift                                                r=+0.000  batt=97.2%  valid_static= 0
+[ep= 249 step=107 t=  50940s τ=   30s] drift                                                r=+0.000  batt=97.2%  valid_static= 0
+[ep= 249 step=108 t=  50970s τ=   30s] drift                                                r=+0.000  batt=97.2%  valid_static= 0
+[ep= 249 step=109 t=  51000s τ=   30s] drift                                                r=+0.000  batt=97.2%  valid_static= 0
+[ep= 249 step=110 t=  51030s τ=   30s] drift                                                r=+0.000  batt=97.2%  valid_static= 0
+[ep= 249 step=111 t=  51060s τ=   30s] drift                                                r=+0.000  batt=97.2%  valid_static= 0
+[ep= 249 step=112 t=  51090s τ=   30s] drift                                                r=+0.000  batt=97.2%  valid_static= 0
+[ep= 249 step=113 t=  51150s τ=   32s] dynamic  slot=0 event=dyn_plume_0015 (cloud=2%)      r=+1.704  batt=97.2%  valid_static= 0  ★DYN lat=+28.85 lon=-5.19
+[ep= 249 step=114 t=  52350s τ= 1200s] drift                                                r=+0.000  batt=97.0%  valid_static= 0
+[ep= 249 step=115 t=  53550s τ= 1200s] drift                                                r=+0.000  batt=96.8%  valid_static= 0
+[ep= 249 step=116 t=  53610s τ=   56s] dynamic  slot=0 (no image / failed)                  r=-0.007  batt=96.8%  valid_static= 0
+[ep= 249 step=117 t=  53670s τ=   34s] dynamic  slot=0 event=dyn_eruption_0016 (cloud=33%)  r=+1.279  batt=96.8%  valid_static= 0  ★DYN lat=+29.28 lon=-1.95
+[ep= 249 step=118 t=  54870s τ= 1200s] drift                                                r=+0.000  batt=96.7%  valid_static= 0
+[ep= 249 step=119 t=  55860s τ=  990s] drift                                                r=+0.000  batt=96.6%  valid_static= 0
+[ep= 249 step=120 t=  55920s τ=   60s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=121 t=  55950s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=122 t=  55980s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=123 t=  56010s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=124 t=  56040s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=125 t=  56070s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=126 t=  56100s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=127 t=  56130s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=128 t=  56160s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=129 t=  56190s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=130 t=  56220s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=131 t=  56250s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=132 t=  56280s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=133 t=  56310s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=134 t=  56340s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=135 t=  56370s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=136 t=  56400s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=137 t=  56430s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=138 t=  56460s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=139 t=  56490s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=140 t=  56520s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=141 t=  56550s τ=   30s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=142 t=  56580s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=143 t=  56610s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=144 t=  56640s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=145 t=  56670s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=146 t=  56700s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=147 t=  56730s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=148 t=  56760s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=149 t=  56790s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=150 t=  56820s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=151 t=  56850s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=152 t=  56880s τ=   30s] drift                                                r=+0.000  batt=96.4%  valid_static= 0
+[ep= 249 step=153 t=  56940s τ=   36s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=96.4%  valid_static= 0
+[ep= 249 step=154 t=  56970s τ=   30s] dynamic  slot=0 event=dyn_wildfire_0017 (cloud=34%)  r=+1.248  batt=96.4%  valid_static= 0  ★DYN lat=+34.95 lon=+5.88
+[ep= 249 step=155 t=  58170s τ= 1200s] drift                                                r=+0.000  batt=96.3%  valid_static= 0
+[ep= 249 step=156 t=  59370s τ= 1200s] drift                                                r=+0.000  batt=96.1%  valid_static= 0
+[ep= 249 step=157 t=  59430s τ=   60s] dynamic  slot=0 (no image / failed)                  r=-0.006  batt=96.1%  valid_static= 0
+[ep= 249 step=158 t=  59490s τ=   32s] dynamic  slot=0 event=dyn_earthquake_0018 (cloud=45%) r=+1.105  batt=96.1%  valid_static= 0  ★DYN lat=+22.48 lon=-6.78
+[ep= 249 step=159 t=  60690s τ= 1200s] drift                                                r=+0.000  batt=95.9%  valid_static= 0
+[ep= 249 step=160 t=  61890s τ= 1200s] drift                                                r=+0.000  batt=95.7%  valid_static= 0
+[ep= 249 step=161 t=  61980s τ=   90s] drift                                                r=+0.000  batt=95.7%  valid_static= 0
+[ep= 249 step=162 t=  62070s τ=   90s] drift                                                r=+0.000  batt=95.7%  valid_static= 0
+[ep= 249 step=163 t=  62100s τ=   30s] drift                                                r=+0.000  batt=95.7%  valid_static= 0
+[ep= 249 step=164 t=  62130s τ=   30s] drift                                                r=+0.000  batt=95.7%  valid_static= 0
+[ep= 249 step=165 t=  62190s τ=   60s] drift                                                r=+0.000  batt=95.7%  valid_static= 0
+[ep= 249 step=166 t=  62220s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=167 t=  62250s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=168 t=  62310s τ=   60s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=169 t=  62340s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=170 t=  62370s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=171 t=  62400s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=172 t=  62430s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=173 t=  62460s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=174 t=  62490s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=175 t=  62520s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=176 t=  62550s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=177 t=  62580s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=178 t=  62610s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=179 t=  62640s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=180 t=  62670s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=181 t=  62700s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=182 t=  62730s τ=   30s] drift                                                r=+0.000  batt=95.6%  valid_static= 0
+[ep= 249 step=183 t=  62790s τ=   42s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=95.6%  valid_static= 0
+[ep= 249 step=184 t=  62820s τ=   30s] dynamic  slot=0 event=dyn_flood_0019 (cloud=37%)     r=+1.223  batt=95.6%  valid_static= 0  ★DYN lat=+29.50 lon=+10.42
+[ep= 249 step=185 t=  64020s τ= 1200s] drift                                                r=+0.000  batt=95.4%  valid_static= 0
+[ep= 249 step=186 t=  65220s τ= 1200s] drift                                                r=+0.000  batt=95.2%  valid_static= 0
+[ep= 249 step=187 t=  66420s τ= 1200s] drift                                                r=+0.000  batt=95.0%  valid_static= 0
+[ep= 249 step=188 t=  67620s τ= 1200s] drift                                                r=+0.000  batt=94.9%  valid_static= 0
+[ep= 249 step=189 t=  68820s τ= 1200s] drift                                                r=+0.000  batt=94.7%  valid_static= 0
+[ep= 249 step=190 t=  70020s τ= 1200s] drift                                                r=+0.000  batt=94.5%  valid_static= 0
+[ep= 249 step=191 t=  71220s τ= 1200s] drift                                                r=+0.000  batt=94.4%  valid_static= 0
+[ep= 249 step=192 t=  71280s τ=   57s] dynamic  slot=0 (no image / failed)                  r=-0.006  batt=94.3%  valid_static= 0
+[ep= 249 step=193 t=  71340s τ=   31s] dynamic  slot=0 event=dyn_flood_0020 (cloud=17%)     r=+1.730  batt=94.3%  valid_static= 0  ★DYN lat=+26.10 lon=+2.42
+[ep= 249 step=194 t=  72540s τ= 1200s] drift                                                r=+0.000  batt=94.2%  valid_static= 0
+[ep= 249 step=195 t=  73740s τ= 1200s] drift                                                r=+0.000  batt=94.0%  valid_static= 0
+[ep= 249 step=196 t=  74940s τ= 1200s] drift                                                r=+0.000  batt=93.8%  valid_static= 0
+[ep= 249 step=197 t=  75000s τ=   44s] dynamic  slot=0 (no image / failed)                  r=-0.004  batt=93.8%  valid_static= 0
+[ep= 249 step=198 t=  75060s τ=   32s] dynamic  slot=1 event=dyn_flood_0022 (cloud=1%)      r=+1.787  batt=93.8%  valid_static= 0  ★DYN lat=+30.16 lon=+11.02
+[ep= 249 step=199 t=  75120s τ=   30s] dynamic  slot=0 event=dyn_flood_0021 (cloud=57%)     r=+0.940  batt=93.8%  valid_static= 0  ★DYN lat=+30.39 lon=-2.86
+[ep= 249 step=200 t=  76320s τ= 1200s] drift                                                r=+0.000  batt=93.6%  valid_static= 0
+[ep= 249 step=201 t=  77520s τ= 1200s] drift                                                r=+0.000  batt=93.4%  valid_static= 0
+[ep= 249 step=202 t=  78720s τ= 1200s] drift                                                r=+0.000  batt=93.2%  valid_static= 0
+[ep= 249 step=203 t=  79920s τ= 1200s] drift                                                r=+0.000  batt=93.1%  valid_static= 0
+[ep= 249 step=204 t=  79980s τ=   53s] dynamic  slot=1 (no image / failed)                  r=-0.005  batt=93.1%  valid_static= 0
+[ep= 249 step=205 t=  80040s τ=   31s] dynamic  slot=1 event=dyn_eruption_0023 (cloud=35%)  r=+1.339  batt=93.1%  valid_static= 0  ★DYN lat=+32.53 lon=+11.31
+[ep= 249 step=206 t=  80100s τ=   31s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=93.0%  valid_static= 0
+[ep= 249 step=207 t=  80130s τ=   30s] dynamic  slot=1 event=dyn_plume_0024 (cloud=19%)     r=+1.536  batt=93.0%  valid_static= 0  ★DYN lat=+19.51 lon=+11.03
+[ep= 249 step=208 t=  80190s τ=   34s] dynamic  slot=0 event=dyn_eruption_0025 (cloud=40%)  r=+1.320  batt=93.0%  valid_static= 0  ★DYN lat=+34.12 lon=-8.55
+[ep= 249 step=209 t=  81390s τ= 1200s] drift                                                r=+0.000  batt=92.9%  valid_static= 0
+[ep= 249 step=210 t=  82590s τ= 1200s] drift                                                r=+0.000  batt=92.7%  valid_static= 0
+[ep= 249 step=211 t=  83790s τ= 1200s] drift                                                r=+0.000  batt=92.5%  valid_static= 0
+[ep= 249 step=212 t=  84990s τ= 1200s] drift                                                r=+0.000  batt=92.3%  valid_static= 0
+[ep= 249 step=213 t=  85080s τ=   62s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=92.5%  valid_static= 0
+[ep= 249 step=214 t=  85110s τ=   30s] dynamic  slot=0 event=dyn_flood_0026 (cloud=39%)     r=+1.296  batt=92.7%  valid_static= 0  ★DYN lat=+28.65 lon=+8.41
+[ep= 249 step=215 t=  86310s τ= 1200s] drift                                                r=+0.000  batt=92.6%  valid_static= 0
+[ep= 249 step=216 t=  86370s τ=   45s] dynamic  slot=0 (no image / failed)                  r=-0.006  batt=92.6%  valid_static= 0
+[ep= 249 step=217 t=  86430s τ=   32s] dynamic  slot=0 event=dyn_plume_0027 (cloud=40%)     r=+1.259  batt=92.6%  valid_static= 0  ★DYN lat=+26.72 lon=+3.66
+[ep= 249 step=218 t=  87630s τ= 1200s] drift                                                r=+0.000  batt=92.4%  valid_static= 0
+[ep= 249 step=219 t=  87690s τ=   43s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=92.4%  valid_static= 0
+[ep= 249 step=220 t=  87720s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0028 (cloud=13%) r=+1.721  batt=92.4%  valid_static= 0  ★DYN lat=+32.40 lon=+11.89
+[ep= 249 step=221 t=  88920s τ= 1200s] drift                                                r=+0.000  batt=92.2%  valid_static= 0
+[ep= 249 step=222 t=  90120s τ= 1200s] drift                                                r=+0.000  batt=92.1%  valid_static= 0
+[ep= 249 step=223 t=  91320s τ= 1200s] drift                                                r=+0.000  batt=91.9%  valid_static= 0
+[ep= 249 step=224 t=  91380s τ=   58s] dynamic  slot=0 (no image / failed)                  r=-0.007  batt=91.9%  valid_static= 0
+[ep= 249 step=225 t=  91440s τ=   32s] dynamic  slot=1 event=dyn_eruption_0030 (cloud=27%)  r=+1.487  batt=92.3%  valid_static= 0  ★DYN lat=+32.26 lon=+2.65
+[ep= 249 step=226 t=  91470s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=92.5%  valid_static= 0
+[ep= 249 step=227 t=  91500s τ=   30s] dynamic  slot=0 event=dyn_plume_0029 (cloud=50%)     r=+1.068  batt=92.6%  valid_static= 0  ★DYN lat=+23.83 lon=-4.67
+[ep= 249 step=228 t=  92700s τ= 1200s] drift                                                r=+0.000  batt=92.5%  valid_static= 0
+[ep= 249 step=229 t=  93900s τ= 1200s] drift                                                r=+0.000  batt=92.4%  valid_static= 0
+[ep= 249 step=230 t=  93960s τ=   48s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.4%  valid_static= 1
+[ep= 249 step=231 t=  94020s τ=   52s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.4%  valid_static= 1
+[ep= 249 step=232 t=  94080s τ=   53s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=233 t=  94140s τ=   54s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=234 t=  94200s τ=   55s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=235 t=  94260s τ=   56s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=236 t=  94320s τ=   57s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=237 t=  94380s τ=   58s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=238 t=  94440s τ=   58s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=239 t=  94500s τ=   59s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=240 t=  94560s τ=   60s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=241 t=  94650s τ=   61s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=242 t=  94740s τ=   62s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=243 t=  94830s τ=   63s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=244 t=  94920s τ=   64s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.3%  valid_static= 1
+[ep= 249 step=245 t=  95010s τ=   65s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.2%  valid_static= 1
+[ep= 249 step=246 t=  95100s τ=   66s] static   target=Moscow (idx=37) (failed/slewing)     r=+0.000  batt=92.2%  valid_static= 1
+[ep= 249 step=247 t=  95130s τ=   51s] static   target=Moscow (idx=37) ✓                    r=+1.284  batt=92.2%  valid_static= 1
+[ep= 249 step=248 t=  96330s τ= 1200s] drift                                                r=+0.000  batt=92.7%  valid_static= 0
+[ep= 249 step=249 t=  97530s τ= 1200s] drift                                                r=+0.000  batt=92.5%  valid_static= 0
+[ep= 249 step=250 t=  97590s τ=   57s] dynamic  slot=0 (no image / failed)                  r=-0.006  batt=92.7%  valid_static= 0
+[ep= 249 step=251 t=  97650s τ=   31s] dynamic  slot=0 event=dyn_eruption_0031 (cloud=39%)  r=+1.251  batt=93.5%  valid_static= 0  ★DYN lat=+34.44 lon=+9.96
+[ep= 249 step=252 t=  98850s τ= 1200s] drift                                                r=+0.000  batt=93.6%  valid_static= 0
+[ep= 249 step=253 t= 100050s τ= 1200s] drift                                                r=+0.000  batt=93.5%  valid_static= 0
+[ep= 249 step=254 t= 101250s τ= 1200s] drift                                                r=+0.000  batt=93.3%  valid_static= 0
+[ep= 249 step=255 t= 102450s τ= 1200s] drift                                                r=+0.000  batt=93.1%  valid_static= 0
+[ep= 249 step=256 t= 103650s τ= 1200s] drift                                                r=+0.000  batt=92.9%  valid_static= 0
+[ep= 249 step=257 t= 103710s τ=   55s] dynamic  slot=0 (no image / failed)                  r=-0.006  batt=93.0%  valid_static= 0
+[ep= 249 step=258 t= 103770s τ=   32s] dynamic  slot=0 event=dyn_earthquake_0032 (cloud=42%) r=+1.298  batt=93.7%  valid_static= 0  ★DYN lat=+31.14 lon=-5.35
+[ep= 249 step=259 t= 104970s τ= 1200s] drift                                                r=+0.000  batt=93.8%  valid_static= 0
+[ep= 249 step=260 t= 105030s τ=   36s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=93.8%  valid_static= 0
+[ep= 249 step=261 t= 105060s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0033 (cloud=35%) r=+1.303  batt=93.8%  valid_static= 0  ★DYN lat=+32.77 lon=+0.01
+[ep= 249 step=262 t= 106260s τ= 1200s] drift                                                r=+0.000  batt=93.6%  valid_static= 0
+[ep= 249 step=263 t= 107460s τ= 1200s] drift                                                r=+0.000  batt=93.5%  valid_static= 0
+[ep= 249 step=264 t= 108660s τ= 1200s] drift                                                r=+0.000  batt=93.3%  valid_static= 0
+[ep= 249 step=265 t= 109860s τ= 1200s] drift                                                r=+0.000  batt=93.2%  valid_static= 0
+[ep= 249 step=266 t= 111060s τ= 1200s] drift                                                r=+0.000  batt=93.0%  valid_static= 0
+[ep= 249 step=267 t= 112260s τ= 1200s] drift                                                r=+0.000  batt=92.8%  valid_static= 0
+[ep= 249 step=268 t= 113460s τ= 1200s] drift                                                r=+0.000  batt=92.6%  valid_static= 0
+[ep= 249 step=269 t= 114660s τ= 1200s] drift                                                r=+0.000  batt=92.4%  valid_static= 0
+[ep= 249 step=270 t= 114720s τ=   57s] dynamic  slot=0 (no image / failed)                  r=-0.008  batt=93.1%  valid_static= 0
+[ep= 249 step=271 t= 114780s τ=   35s] dynamic  slot=0 event=dyn_earthquake_0034 (cloud=62%) r=-0.040  batt=95.5%  valid_static= 0  ★DYN lat=+22.28 lon=-2.13
+[ep= 249 step=272 t= 115980s τ= 1200s] drift                                                r=+0.000  batt=96.5%  valid_static= 0
+[ep= 249 step=273 t= 116040s τ=   49s] dynamic  slot=0 (no image / failed)                  r=-0.005  batt=96.6%  valid_static= 0
+[ep= 249 step=274 t= 116070s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=96.9%  valid_static= 0
+[ep= 249 step=275 t= 116100s τ=   30s] dynamic  slot=0 event=dyn_wildfire_0035 (cloud=16%)  r=+1.559  batt=97.3%  valid_static= 0  ★DYN lat=+33.62 lon=-5.98
+[ep= 249 step=276 t= 117300s τ= 1200s] drift                                                r=+0.000  batt=97.3%  valid_static= 0
+[ep= 249 step=277 t= 117360s τ=   45s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=97.3%  valid_static= 0
+[ep= 249 step=278 t= 117390s τ=   30s] dynamic  slot=1 event=dyn_wildfire_0038 (cloud=26%)  r=+1.439  batt=97.3%  valid_static= 0  ★DYN lat=+26.39 lon=-1.18
+[ep= 249 step=279 t= 117420s τ=   30s] dynamic  slot=1 (no image / failed)                  r=-0.099  batt=97.3%  valid_static= 0
+[ep= 249 step=280 t= 117450s τ=   30s] dynamic  slot=1 event=dyn_plume_0037 (cloud=49%)     r=+1.045  batt=97.2%  valid_static= 0  ★DYN lat=+31.59 lon=+2.04
+[ep= 249 step=281 t= 117480s τ=   30s] dynamic  slot=0 event=dyn_flood_0036 (cloud=26%)     r=+1.506  batt=97.2%  valid_static= 0  ★DYN lat=+27.77 lon=-0.98
+[ep= 249 step=282 t= 118680s τ= 1200s] drift                                                r=+0.000  batt=97.1%  valid_static= 0
+[ep= 249 step=283 t= 119880s τ= 1200s] drift                                                r=+0.000  batt=96.9%  valid_static= 0
+[ep= 249 step=284 t= 121080s τ= 1200s] drift                                                r=+0.000  batt=96.7%  valid_static= 0
+[ep= 249 step=285 t= 121140s τ=   57s] dynamic  slot=0 (no image / failed)                  r=-0.007  batt=97.2%  valid_static= 0
+[ep= 249 step=286 t= 121200s τ=   33s] dynamic  slot=0 event=dyn_earthquake_0039 (cloud=17%) r=+1.629  batt=99.0%  valid_static= 0  ★DYN lat=+31.68 lon=-5.46
+[ep= 249 step=287 t= 122400s τ= 1200s] drift                                                r=+0.000  batt=99.5%  valid_static= 0
+[ep= 249 step=288 t= 122460s τ=   39s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=99.5%  valid_static= 0
+[ep= 249 step=289 t= 122490s τ=   30s] dynamic  slot=1 event=dyn_earthquake_0041 (cloud=26%) r=+1.439  batt=99.6%  valid_static= 0  ★DYN lat=+23.17 lon=-1.20
+[ep= 249 step=290 t= 122520s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=99.6%  valid_static= 0
+[ep= 249 step=291 t= 122550s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0040 (cloud=24%) r=+1.640  batt=99.6%  valid_static= 0  ★DYN lat=+35.78 lon=-0.57
+[ep= 249 step=292 t= 123750s τ= 1200s] drift                                                r=+0.000  batt=99.4%  valid_static= 0
+[ep= 249 step=293 t= 124950s τ= 1200s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=294 t= 126150s τ= 1200s] drift                                                r=+0.000  batt=99.0%  valid_static= 0
+[ep= 249 step=295 t= 127170s τ= 1020s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step=296 t= 127200s τ=   30s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step=297 t= 127230s τ=   30s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step=298 t= 127260s τ=   30s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step=299 t= 127290s τ=   30s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step=300 t= 127320s τ=   30s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step=301 t= 127350s τ=   30s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step=302 t= 127380s τ=   30s] drift                                                r=+0.000  batt=98.9%  valid_static= 0
+[ep= 249 step=303 t= 127440s τ=   49s] dynamic  slot=2 (no image / failed)                  r=-0.003  batt=99.4%  valid_static= 0
+[ep= 249 step=304 t= 127470s τ=   30s] dynamic  slot=2 event=dyn_earthquake_0043 (cloud=50%) r=+1.099  batt=99.9%  valid_static= 0  ★DYN lat=+29.79 lon=-7.25
+[ep= 249 step=305 t= 127500s τ=   30s] drift                                                r=+0.000  batt=100.0%  valid_static= 0
+[ep= 249 step=306 t= 127560s τ=   42s] dynamic  slot=1 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 249 step=307 t= 127590s τ=   30s] dynamic  slot=1 event=dyn_earthquake_0044 (cloud=40%) r=+1.358  batt=100.0%  valid_static= 0  ★DYN lat=+36.67 lon=+6.84
+[ep= 249 step=308 t= 127620s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=100.0%  valid_static= 0
+[ep= 249 step=309 t= 127650s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0042 (cloud=13%) r=+1.518  batt=100.0%  valid_static= 0  ★DYN lat=+31.86 lon=+3.89
+[ep= 249 step=310 t= 128850s τ= 1200s] drift                                                r=+0.000  batt=99.8%  valid_static= 0
+[ep= 249 step=311 t= 128910s τ=   47s] dynamic  slot=0 (no image / failed)                  r=-0.005  batt=99.8%  valid_static= 0
+[ep= 249 step=312 t= 128940s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=99.8%  valid_static= 0
+[ep= 249 step=313 t= 128970s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0045 (cloud=29%) r=+1.451  batt=99.8%  valid_static= 0  ★DYN lat=+23.51 lon=+7.70
+[ep= 249 step=314 t= 130170s τ= 1200s] drift                                                r=+0.000  batt=99.6%  valid_static= 0
+[ep= 249 step=315 t= 130260s τ=   61s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=99.6%  valid_static= 0
+[ep= 249 step=316 t= 130290s τ=   30s] dynamic  slot=1 event=dyn_earthquake_0046 (cloud=26%) r=+1.596  batt=99.6%  valid_static= 0  ★DYN lat=+20.32 lon=+8.15
+[ep= 249 step=317 t= 130320s τ=   30s] dynamic  slot=0 (no image / failed)                  r=-0.002  batt=99.6%  valid_static= 0
+[ep= 249 step=318 t= 130350s τ=   30s] dynamic  slot=0 event=dyn_eruption_0047 (cloud=42%)  r=+1.198  batt=99.6%  valid_static= 0  ★DYN lat=+23.76 lon=-1.29
+[ep= 249 step=319 t= 131550s τ= 1200s] drift                                                r=+0.000  batt=99.5%  valid_static= 0
+[ep= 249 step=320 t= 132750s τ= 1200s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step=321 t= 132900s τ=  150s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step=322 t= 132930s τ=   30s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step=323 t= 132960s τ=   30s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step=324 t= 133020s τ=   60s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step=325 t= 133050s τ=   30s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step=326 t= 133080s τ=   30s] drift                                                r=+0.000  batt=99.3%  valid_static= 0
+[ep= 249 step=327 t= 133140s τ=   60s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=328 t= 133170s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=329 t= 133260s τ=   90s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=330 t= 133290s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=331 t= 133320s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=332 t= 133350s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=333 t= 133380s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=334 t= 133410s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=335 t= 133440s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=336 t= 133470s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=337 t= 133500s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=338 t= 133530s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=339 t= 133560s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=340 t= 133590s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=341 t= 133620s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=342 t= 133680s τ=   36s] dynamic  slot=1 event=dyn_earthquake_0048 (cloud=37%) r=+1.227  batt=99.2%  valid_static= 0  ★DYN lat=+34.55 lon=+4.22
+[ep= 249 step=343 t= 133710s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=344 t= 133740s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=345 t= 133770s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=346 t= 133800s τ=   30s] drift                                                r=+0.000  batt=99.2%  valid_static= 0
+[ep= 249 step=347 t= 133860s τ=   32s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=99.2%  valid_static= 0
+[ep= 249 step=348 t= 133890s τ=   30s] dynamic  slot=0 event=dyn_earthquake_0049 (cloud=19%) r=+1.523  batt=99.2%  valid_static= 0  ★DYN lat=+24.90 lon=+3.43
+[ep= 249 step=349 t= 135090s τ= 1200s] drift                                                r=+0.000  batt=99.0%  valid_static= 0
+[ep= 249 step=350 t= 135150s τ=   49s] dynamic  slot=1 (no image / failed)                  r=-0.003  batt=99.0%  valid_static= 0
+[ep= 249 step=351 t= 135180s τ=   30s] dynamic  slot=1 event=dyn_flood_0051 (cloud=5%)      r=+1.789  batt=99.0%  valid_static= 0  ★DYN lat=+33.41 lon=-4.03
+[ep= 249 step=352 t= 135210s τ=   30s] dynamic  slot=0 event=dyn_flood_0050 (cloud=40%)     r=+1.338  batt=99.0%  valid_static= 0  ★DYN lat=+31.34 lon=-4.13
+[ep= 249 step=353 t= 136410s τ= 1200s] drift                                                r=+0.000  batt=98.8%  valid_static= 0
+[ep= 249 step=354 t= 137610s τ= 1200s] drift                                                r=+0.000  batt=98.6%  valid_static= 0
+[ep= 249 step=355 t= 138810s τ= 1200s] drift                                                r=+0.000  batt=98.5%  valid_static= 0
+[ep= 249 step=356 t= 140010s τ= 1200s] drift                                                r=+0.000  batt=98.3%  valid_static= 0
+[ep= 249 step=357 t= 141210s τ= 1200s] drift                                                r=+0.000  batt=98.1%  valid_static= 0
+[ep= 249 step=358 t= 141270s τ=   50s] dynamic  slot=0 (no image / failed)                  r=-0.004  batt=98.1%  valid_static= 0
+[ep= 249 step=359 t= 141300s τ=   30s] dynamic  slot=0 event=dyn_plume_0052 (cloud=20%)     r=+1.461  batt=98.1%  valid_static= 0  ★DYN lat=+29.25 lon=-6.61
+[ep= 249 step=360 t= 142500s τ= 1200s] drift                                                r=+0.000  batt=97.9%  valid_static= 0
+[ep= 249 step=361 t= 142590s τ=   63s] dynamic  slot=0 (no image / failed)                  r=-0.003  batt=97.9%  valid_static= 0
+[ep= 249 step=362 t= 142620s τ=   30s] dynamic  slot=0 event=dyn_wildfire_0053 (cloud=47%)  r=+1.084  batt=97.9%  valid_static= 0  ★DYN lat=+19.83 lon=+6.29
+[ep= 249 step=363 t= 143820s τ= 1200s] drift                                                r=+0.000  batt=97.7%  valid_static= 0
+[ep= 249 step=364 t= 145020s τ= 1200s] drift                                                r=+0.000  batt=97.6%  valid_static= 0
+[ep= 249 step=365 t= 145050s τ=   30s] drift                                                r=+0.000  batt=97.6%  valid_static= 0
+[ep= 249 step=366 t= 145080s τ=   30s] drift                                                r=+0.000  batt=97.6%  valid_static= 0
+[ep= 249 step=367 t= 145110s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=368 t= 145140s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=369 t= 145170s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=370 t= 145200s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=371 t= 145230s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=372 t= 145260s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=373 t= 145290s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=374 t= 145320s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=375 t= 145350s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0
+[ep= 249 step=376 t= 145380s τ=   30s] drift                                                r=+0.000  batt=97.5%  valid_static= 0

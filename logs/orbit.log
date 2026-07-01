@@ -3701,3 +3701,36 @@
 [ep= 248 step= 60 t=12.06h]  lat=+52.654° lon= +71.195° alt=691.0km  →  International (+52.7°, +71.2°)  batt=100.0%
 [ep= 248 step= 80 t=15.52h]  lat=+14.042° lon= +62.669° alt=679.8km  →  International (+14.0°, +62.7°)  batt=100.0%
 [ep= 248 step=100 t=19.93h]  lat=+54.638° lon=-130.687° alt=696.0km  →  International (+54.6°, -130.7°)  batt=100.0%
+[ep= 248 step=120 t=22.19h]  lat=-11.028° lon= +59.333° alt=679.9km  →  International (-11.0°, +59.3°)  batt=100.0%
+[ep= 248 step=140 t=22.36h]  lat=-47.238° lon= +52.112° alt=690.7km  →  International (-47.2°, +52.1°)  batt=100.0%
+[ep= 248 step=160 t=23.81h]  lat= -5.904° lon= +60.142° alt=679.2km  →  International (-5.9°, +60.1°)   batt=100.0%
+[ep= 248 step=180 t=23.98h]  lat=-42.196° lon= +53.610° alt=688.6km  →  International (-42.2°, +53.6°)  batt=100.0%
+[ep= 248 step=200 t=25.54h]  lat=-26.275° lon= +57.043° alt=683.1km  →  International (-26.3°, +57.0°)  batt=100.0%
+[ep= 248 step=220 t=28.65h]  lat=+11.308° lon= +62.803° alt=679.3km  →  International (+11.3°, +62.8°)  batt=100.0%
+[ep= 248 step=240 t=32.43h]  lat=-77.881° lon= -77.398° alt=701.7km  →  International (-77.9°, -77.4°)  batt=100.0%
+[ep= 248 step=260 t=32.74h]  lat=-13.195° lon=-116.748° alt=687.8km  →  International (-13.2°, -116.7°)  batt=100.0%
+[ep= 248 step=280 t=33.46h]  lat=+35.721° lon= +67.225° alt=684.8km  →  International (+35.7°, +67.2°)  batt=100.0%
+[ep= 248 step=300 t=34.36h]  lat=-17.091° lon=-116.087° alt=688.5km  →  International (-17.1°, -116.1°)  batt=100.0%
+[ep= 248 step=320 t=35.20h]  lat=+14.190° lon= +63.503° alt=679.3km  →  International (+14.2°, +63.5°)  batt=100.0%
+[ep= 248 step=340 t=39.61h]  lat=+54.495° lon=-129.816° alt=696.3km  →  International (+54.5°, -129.8°)  batt=100.0%
+[ep= 248 step=360 t=43.53h]  lat=-14.872° lon= +59.641° alt=680.3km  →  International (-14.9°, +59.6°)  batt=100.0%
+[ep= 248 step=380 t=43.71h]  lat=-54.560° lon= +50.327° alt=693.4km  →  International (-54.6°, +50.3°)  batt=100.0%
+[ep= 248 step=400 t=47.85h]  lat=+61.415° lon=-133.095° alt=697.6km  →  International (+61.4°, -133.1°)  batt=100.0%
+[ep= 249 step= 20 t= 4.74h]  lat=-38.907° lon=-113.236° alt=693.1km  →  International (-38.9°, -113.2°)  batt= 97.9%
+[ep= 249 step= 40 t= 7.88h]  lat=-68.231° lon= -98.898° alt=700.5km  →  International (-68.2°, -98.9°)  batt= 99.6%
+[ep= 249 step= 60 t=12.30h]  lat= +0.212° lon= +60.537° alt=679.6km  →  International (+0.2°, +60.5°)   batt= 98.2%
+[ep= 249 step= 80 t=12.55h]  lat=-54.065° lon= +49.247° alt=693.7km  →  International (-54.1°, +49.2°)  batt= 98.1%
+[ep= 249 step=100 t=14.09h]  lat=-32.862° lon= +55.329° alt=686.0km  →  International (-32.9°, +55.3°)  batt= 97.3%
+[ep= 249 step=120 t=15.53h]  lat=+10.487° lon= +62.142° alt=680.0km  →  International (+10.5°, +62.1°)  batt= 96.5%
+[ep= 249 step=140 t=15.70h]  lat=-25.946° lon= +56.693° alt=683.7km  →  International (-25.9°, +56.7°)  batt= 96.5%
+[ep= 249 step=160 t=17.19h]  lat= +6.505° lon= +61.633° alt=679.6km  →  International (+6.5°, +61.6°)   batt= 95.7%
+[ep= 249 step=180 t=17.41h]  lat=-40.745° lon= +53.704° alt=688.5km  →  International (-40.7°, +53.7°)  batt= 95.6%
+[ep= 249 step=200 t=21.20h]  lat=-26.581° lon=-115.065° alt=690.1km  →  International (-26.6°, -115.1°)  batt= 93.6%
+[ep= 249 step=220 t=24.37h]  lat=-51.110° lon=-108.885° alt=696.8km  →  International (-51.1°, -108.9°)  batt= 92.4%
+[ep= 249 step=240 t=26.27h]  lat= +5.305° lon=-119.675° alt=686.4km  →  International (+5.3°, -119.7°)  batt= 92.3%
+[ep= 249 step=260 t=29.18h]  lat=-74.152° lon= -88.854° alt=701.6km  →  International (-74.2°, -88.9°)  batt= 93.8%
+[ep= 249 step=280 t=32.63h]  lat=-38.722° lon=-112.138° alt=693.5km  →  International (-38.7°, -112.1°)  batt= 97.2%
+[ep= 249 step=300 t=35.37h]  lat=-22.660° lon= +58.064° alt=682.6km  →  International (-22.7°, +58.1°)  batt= 98.9%
+[ep= 249 step=320 t=36.88h]  lat= +6.165° lon= +62.393° alt=679.3km  →  International (+6.2°, +62.4°)   batt= 99.3%
+[ep= 249 step=340 t=37.11h]  lat=-44.676° lon= +53.474° alt=690.1km  →  International (-44.7°, +53.5°)  batt= 99.2%
+[ep= 249 step=360 t=39.58h]  lat=+47.745° lon=-127.346° alt=694.3km  →  International (+47.7°, -127.3°)  batt= 97.9%
