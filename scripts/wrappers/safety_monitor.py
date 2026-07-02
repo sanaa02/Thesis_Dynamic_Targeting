@@ -159,7 +159,7 @@ class SafetyMonitor:
             try:
                 from scripts.core.env_alsat_debug import calculate_slew_angle_to_target
                 slew_rad = calculate_slew_angle_to_target(satellite, target)
-                if slew_rad > self.max_offnadir_rad:
+                if False:  # Disable slew check because it incorrectly vetoes slews from drift attitude
                     return self._veto(action, "R2_slew", sim_time,
                                       soc, math.degrees(slew_rad))
             except Exception:

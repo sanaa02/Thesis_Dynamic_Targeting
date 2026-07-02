@@ -364,9 +364,9 @@ class ImageTargetAction(Action):
         # Check access window
         accessible_window = None
         for opp in self.satellite.upcoming_opportunities:
-            if opp["object"] is target and opp["type"] == "target":
+            if getattr(opp["object"], "name", "") == getattr(target, "name", "") and opp["type"] == "target":
                 t_start, t_end = opp["window"]
-                if t_start <= now <= t_end:
+                if t_start <= now + SCHED_STEP_S and now <= t_end:
                     accessible_window = opp
                     break
 
@@ -528,10 +528,10 @@ class AlsatScenario(Scenario):
         self._cloud_model = cloud_model
         self.targets      = []
         for i, cfg in enumerate(targets_config):
-            lat      = math.radians(float(cfg.get("lat_deg", cfg.get("lat", 0))))
-            lon      = math.radians(float(cfg.get("lon_deg", cfg.get("lon", 0))))
+            lat_deg  = float(cfg.get("lat_deg", cfg.get("lat", 0)))
+            lon_deg  = float(cfg.get("lon_deg", cfg.get("lon", 0)))
             alt      = float(cfg.get("alt_m", 0.0))
-            r_LP_P   = lla2ecef(lat, lon, alt)
+            r_LP_P   = lla2ecef(lat_deg, lon_deg, EARTH_R_M + alt)
             priority = float(cfg.get("priority", 1.0))
             name     = str(cfg.get("name", cfg.get("id", f"target_{i}")))
             self.targets.append(AlsatTarget(name, r_LP_P, priority, cloud_model, i))

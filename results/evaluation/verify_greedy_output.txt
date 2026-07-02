@@ -1,0 +1,1026 @@
+[bsk_patches] All patches: eclipse=OK  lookahead=OK  power=OK  dyn_lock=OK  dyn_img=OK
+=== VERIFYING GREEDY CLOUD POLICY ===
+[DEBUG] make_env: event_rate=1.0
+
+Step 01 | t=1200s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 38 | Priority: 0.20 | Forecast Cloud: 0.22 | Window: [2499s, 2588s] | Mask Valid: False (Reason: too far in future (w0=2499 > now+1200=1200))
+  Slot 1: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.61 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=1200))
+  Slot 2: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.80 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=1200))
+  Slot 3: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.04 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=1200))
+  Slot 4: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.69 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=1200))
+  Slot 5: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.11 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=1200))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 02 | t=2400s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 38 | Priority: 0.20 | Forecast Cloud: 0.26 | Window: [2499s, 2588s] | Mask Valid: False (Reason: too far in future (w0=2499 > now+1200=2400))
+  Slot 1: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.68 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=2400))
+  Slot 2: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.80 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=2400))
+  Slot 3: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.02 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=2400))
+  Slot 4: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.75 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=2400))
+  Slot 5: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=2400))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 03 | t=2490s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 38 | Priority: 0.20 | Forecast Cloud: 0.30 | Window: [2499s, 2588s] | Mask Valid: True (Reason: should be valid!)
+  Slot 1: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.66 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=3600))
+  Slot 2: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.84 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=3600))
+  Slot 3: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.24 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=3600))
+  Slot 4: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.64 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=3600))
+  Slot 5: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=3600))
+-> CHOSE TARGET 38 (Slot 0) | Forecast Cloud: 0.30
+   Target 38 actual imaged state: False | Step Reward: +0.0000
+
+Step 04 | t=2580s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 38 | Priority: 0.20 | Forecast Cloud: 0.34 | Window: [2499s, 2588s] | Mask Valid: True (Reason: should be valid!)
+  Slot 1: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.61 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=3690))
+  Slot 2: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.76 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=3690))
+  Slot 3: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.09 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=3690))
+  Slot 4: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.66 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=3690))
+  Slot 5: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.13 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=3690))
+-> CHOSE TARGET 38 (Slot 0) | Forecast Cloud: 0.34
+   Target 38 actual imaged state: False | Step Reward: +0.0000
+
+Step 05 | t=2640s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 38 | Priority: 0.20 | Forecast Cloud: 0.37 | Window: [2499s, 2588s] | Mask Valid: True (Reason: should be valid!)
+  Slot 1: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.69 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=3780))
+  Slot 2: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.74 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=3780))
+  Slot 3: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.07 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=3780))
+  Slot 4: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.67 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=3780))
+  Slot 5: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.15 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=3780))
+-> CHOSE TARGET 38 (Slot 0) | Forecast Cloud: 0.37
+   Target 38 actual imaged state: False | Step Reward: +0.0000
+
+Step 06 | t=3840s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.67 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=3840))
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.78 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=3840))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.10 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=3840))
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.64 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=3840))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=3840))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.43 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=3840))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 07 | t=5040s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.67 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=5040))
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.78 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=5040))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.14 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=5040))
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.67 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=5040))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.06 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=5040))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.42 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=5040))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 08 | t=6240s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.47 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=6240))
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.69 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=6240))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.10 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=6240))
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.65 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=6240))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.07 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=6240))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.43 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=6240))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 09 | t=7440s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.64 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too far in future (w0=7919 > now+1200=7440))
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.74 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8332 > now+1200=7440))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.07 | Window: [8333s, 8406s] | Mask Valid: False (Reason: too far in future (w0=8333 > now+1200=7440))
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.71 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=7440))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.03 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=7440))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.39 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=7440))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 10 | t=7530s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.59 | Window: [7919s, 7967s] | Mask Valid: True (Reason: should be valid!)
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.74 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.74 > 0.6))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.12 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.57 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=8640))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.02 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=8640))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.47 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=8640))
+-> CHOSE TARGET 35 (Slot 2) | Forecast Cloud: 0.12
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 11 | t=7620s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.56 | Window: [7919s, 7967s] | Mask Valid: True (Reason: should be valid!)
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.72 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.72 > 0.6))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.14 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.71 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=8730))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.02 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=8730))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.45 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=8730))
+-> CHOSE TARGET 35 (Slot 2) | Forecast Cloud: 0.14
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 12 | t=7710s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.61 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too cloudy forecast (0.61 > 0.6))
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.85 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.85 > 0.6))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.14 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.63 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=8820))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=8820))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.53 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=8820))
+-> CHOSE TARGET 35 (Slot 2) | Forecast Cloud: 0.14
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 13 | t=7800s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.62 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too cloudy forecast (0.62 > 0.6))
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.75 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.75 > 0.6))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.09 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.51 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=8910))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.15 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=8910))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.46 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=8910))
+-> CHOSE TARGET 35 (Slot 2) | Forecast Cloud: 0.09
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 14 | t=7890s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.58 | Window: [7919s, 7967s] | Mask Valid: True (Reason: should be valid!)
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.74 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.74 > 0.6))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.14 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.66 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=9000))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=9000))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.41 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=9000))
+-> CHOSE TARGET 35 (Slot 2) | Forecast Cloud: 0.14
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 15 | t=7980s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.73 | Window: [7919s, 7967s] | Mask Valid: False (Reason: too cloudy forecast (0.73 > 0.6))
+  Slot 1: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.78 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.78 > 0.6))
+  Slot 2: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.13 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 3: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.64 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=9090))
+  Slot 4: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=9090))
+  Slot 5: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.47 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=9090))
+-> CHOSE TARGET 35 (Slot 2) | Forecast Cloud: 0.13
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 16 | t=8070s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.77 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.77 > 0.6))
+  Slot 1: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.09 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.71 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=9180))
+  Slot 3: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.11 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=9180))
+  Slot 4: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.35 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=9180))
+  Slot 5: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.63 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=9180))
+-> CHOSE TARGET 35 (Slot 1) | Forecast Cloud: 0.09
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 17 | t=8160s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.90 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.90 > 0.6))
+  Slot 1: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.16 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.64 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=9270))
+  Slot 3: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.04 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=9270))
+  Slot 4: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.40 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=9270))
+  Slot 5: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.56 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=9270))
+-> CHOSE TARGET 35 (Slot 1) | Forecast Cloud: 0.16
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 18 | t=8250s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.83 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.83 > 0.6))
+  Slot 1: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.13 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.61 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=9360))
+  Slot 3: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.10 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=9360))
+  Slot 4: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.43 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=9360))
+  Slot 5: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.68 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=9360))
+-> CHOSE TARGET 35 (Slot 1) | Forecast Cloud: 0.13
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 19 | t=8340s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.81 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.81 > 0.6))
+  Slot 1: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.25 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.76 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=9450))
+  Slot 3: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.03 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=9450))
+  Slot 4: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.49 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=9450))
+  Slot 5: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.63 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=9450))
+-> CHOSE TARGET 35 (Slot 1) | Forecast Cloud: 0.25
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 20 | t=8430s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 36 | Priority: 0.24 | Forecast Cloud: 0.93 | Window: [8332s, 8406s] | Mask Valid: False (Reason: too cloudy forecast (0.93 > 0.6))
+  Slot 1: Tgt 35 | Priority: 0.26 | Forecast Cloud: 0.11 | Window: [8333s, 8406s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.70 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=9540))
+  Slot 3: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.14 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=9540))
+  Slot 4: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.48 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=9540))
+  Slot 5: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.68 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=9540))
+-> CHOSE TARGET 35 (Slot 1) | Forecast Cloud: 0.11
+   Target 35 actual imaged state: False | Step Reward: +0.0000
+
+Step 21 | t=9630s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.69 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=9630))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.08 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=9630))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.57 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=9630))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.67 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=9630))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.94 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=9630))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.86 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=9630))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 22 | t=9660s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.66 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=10830))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.06 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=10830))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.43 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=10830))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.57 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=10830))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.83 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=10830))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=10830))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 23 | t=9690s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.61 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=10860))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.02 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=10860))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.44 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=10860))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.53 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=10860))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=10860))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=10860))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 24 | t=9720s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.61 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=10890))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.14 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=10890))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.45 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=10890))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.67 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=10890))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.91 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=10890))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.94 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=10890))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 25 | t=9750s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.55 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=10920))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.11 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=10920))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.50 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=10920))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=10920))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.86 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=10920))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.95 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=10920))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 26 | t=9780s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.65 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=10950))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.19 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=10950))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.55 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=10950))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.62 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=10950))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.95 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=10950))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.89 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=10950))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 27 | t=9810s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.73 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=10980))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.00 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=10980))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.45 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=10980))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.64 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=10980))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.84 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=10980))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.98 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=10980))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 28 | t=9840s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.65 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11010))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.15 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11010))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.42 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11010))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11010))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.97 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11010))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.94 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11010))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 29 | t=9870s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.61 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11040))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.04 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11040))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.46 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11040))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.74 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11040))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.83 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11040))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11040))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 30 | t=9900s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.70 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11070))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.12 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11070))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.41 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11070))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.59 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11070))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.93 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11070))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.95 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11070))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 31 | t=9930s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.68 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11100))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.17 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11100))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.39 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11100))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.63 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11100))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.95 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11100))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11100))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 32 | t=9960s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.68 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11130))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.10 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11130))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.42 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11130))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11130))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.87 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11130))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.94 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11130))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 33 | t=9990s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.72 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11160))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.06 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11160))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.39 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11160))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.70 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11160))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.79 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11160))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.96 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11160))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 34 | t=10020s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.72 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11190))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.08 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11190))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.47 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11190))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.65 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11190))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.84 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11190))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.91 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11190))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 35 | t=10050s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.69 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11220))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.12 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11220))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.44 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11220))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.65 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11220))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.97 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11220))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.87 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11220))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 36 | t=10080s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.68 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11250))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.08 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11250))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.52 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11250))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11250))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.93 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11250))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.96 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11250))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 37 | t=10110s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.68 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11280))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11280))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.53 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11280))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.62 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11280))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.97 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11280))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.95 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11280))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 38 | t=10140s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.68 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11310))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.11 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11310))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.44 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11310))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11310))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.84 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11310))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11310))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 39 | t=10170s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.56 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11340))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11340))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.49 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11340))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11340))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11340))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.94 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11340))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 40 | t=10230s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.58 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11370))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.10 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11370))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.52 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11370))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.67 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11370))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.83 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11370))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11370))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 41 | t=10260s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.67 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11430))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.10 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11430))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.41 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11430))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.56 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11430))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11430))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11430))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 42 | t=10290s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.59 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11460))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.04 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11460))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.48 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11460))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.68 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11460))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.92 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11460))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.89 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11460))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 43 | t=10350s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.71 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11490))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.15 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11490))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.51 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11490))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11490))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.85 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11490))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.94 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11490))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 44 | t=10380s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.71 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11550))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.10 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11550))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.40 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11550))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.64 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11550))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.89 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11550))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.99 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11550))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 45 | t=10470s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.64 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11580))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.10 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11580))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.56 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11580))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.55 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11580))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.94 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11580))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11580))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 46 | t=10500s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.71 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11670))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.06 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11670))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.42 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11670))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11670))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.86 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11670))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11670))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 47 | t=10620s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.68 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11700))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.01 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11700))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.46 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11700))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11700))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.96 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11700))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.96 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11700))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 48 | t=10710s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.67 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11820))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.01 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11820))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.44 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11820))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11820))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.89 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11820))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.89 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11820))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 49 | t=10740s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.63 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11910))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.06 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11910))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.39 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11910))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.67 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11910))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.92 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11910))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.94 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11910))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 50 | t=10770s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.61 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11940))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.14 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11940))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.43 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11940))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11940))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.97 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11940))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.98 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11940))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 51 | t=10920s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.63 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=11970))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.08 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=11970))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.40 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=11970))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.69 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=11970))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=11970))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=11970))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 52 | t=10980s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.59 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=12120))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.10 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=12120))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.50 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=12120))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.53 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=12120))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=12120))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.90 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=12120))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 53 | t=11100s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.74 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=12180))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.03 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=12180))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.38 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=12180))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=12180))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.90 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=12180))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.98 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=12180))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 54 | t=11220s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.66 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=12300))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.14 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=12300))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.53 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=12300))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=12300))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=12300))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=12300))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 55 | t=12420s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.64 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=12420))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.14 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=12420))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.45 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=12420))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.72 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=12420))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.89 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=12420))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.87 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=12420))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 56 | t=13620s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.65 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too far in future (w0=14009 > now+1200=13620))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.14 | Window: [14100s, 14213s] | Mask Valid: False (Reason: too far in future (w0=14100 > now+1200=13620))
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.49 | Window: [14111s, 14230s] | Mask Valid: False (Reason: too far in future (w0=14111 > now+1200=13620))
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.63 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too far in future (w0=14127 > now+1200=13620))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.86 | Window: [14134s, 14189s] | Mask Valid: False (Reason: too far in future (w0=14134 > now+1200=13620))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.96 | Window: [14167s, 14205s] | Mask Valid: False (Reason: too far in future (w0=14167 > now+1200=13620))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 57 | t=13710s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.64 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too cloudy forecast (0.64 > 0.6))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.01 | Window: [14100s, 14213s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.47 | Window: [14111s, 14230s] | Mask Valid: False (Reason: should be valid!)
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [14127s, 14248s] | Mask Valid: False (Reason: should be valid!)
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.97 | Window: [14134s, 14189s] | Mask Valid: True (Reason: too cloudy forecast (0.97 > 0.6))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.97 | Window: [14167s, 14205s] | Mask Valid: True (Reason: too cloudy forecast (0.97 > 0.6))
+-> CHOSE TARGET 19 (Slot 1) | Forecast Cloud: 0.01
+   Target 19 actual imaged state: False | Step Reward: +0.0000
+
+Step 58 | t=13800s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.67 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too cloudy forecast (0.67 > 0.6))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.09 | Window: [14100s, 14213s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.44 | Window: [14111s, 14230s] | Mask Valid: False (Reason: should be valid!)
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [14127s, 14248s] | Mask Valid: False (Reason: should be valid!)
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.82 | Window: [14134s, 14189s] | Mask Valid: True (Reason: too cloudy forecast (0.82 > 0.6))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: True (Reason: too cloudy forecast (1.00 > 0.6))
+-> CHOSE TARGET 19 (Slot 1) | Forecast Cloud: 0.09
+   Target 19 actual imaged state: False | Step Reward: +0.0000
+
+Step 59 | t=13890s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.67 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too cloudy forecast (0.67 > 0.6))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.10 | Window: [14100s, 14213s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.44 | Window: [14111s, 14230s] | Mask Valid: False (Reason: should be valid!)
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.57 | Window: [14127s, 14248s] | Mask Valid: False (Reason: should be valid!)
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.96 | Window: [14134s, 14189s] | Mask Valid: True (Reason: too cloudy forecast (0.96 > 0.6))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.93 | Window: [14167s, 14205s] | Mask Valid: True (Reason: too cloudy forecast (0.93 > 0.6))
+-> CHOSE TARGET 19 (Slot 1) | Forecast Cloud: 0.10
+   Target 19 actual imaged state: False | Step Reward: +0.0000
+
+Step 60 | t=13980s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.70 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too cloudy forecast (0.70 > 0.6))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.17 | Window: [14100s, 14213s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.46 | Window: [14111s, 14230s] | Mask Valid: False (Reason: should be valid!)
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.57 | Window: [14127s, 14248s] | Mask Valid: False (Reason: should be valid!)
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.94 | Window: [14134s, 14189s] | Mask Valid: True (Reason: too cloudy forecast (0.94 > 0.6))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: True (Reason: too cloudy forecast (1.00 > 0.6))
+-> CHOSE TARGET 19 (Slot 1) | Forecast Cloud: 0.17
+   Target 19 actual imaged state: False | Step Reward: +0.0000
+
+Step 61 | t=14070s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.73 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too cloudy forecast (0.73 > 0.6))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.13 | Window: [14100s, 14213s] | Mask Valid: False (Reason: should be valid!)
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.44 | Window: [14111s, 14230s] | Mask Valid: False (Reason: should be valid!)
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too cloudy forecast (0.61 > 0.6))
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.92 | Window: [14134s, 14189s] | Mask Valid: True (Reason: too cloudy forecast (0.92 > 0.6))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.99 | Window: [14167s, 14205s] | Mask Valid: True (Reason: too cloudy forecast (0.99 > 0.6))
+-> CHOSE TARGET 16 (Slot 4) | Forecast Cloud: 0.92
+   Target 16 actual imaged state: False | Step Reward: +0.0000
+
+Step 62 | t=14160s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 25 | Priority: 0.47 | Forecast Cloud: 0.67 | Window: [14009s, 14129s] | Mask Valid: False (Reason: too cloudy forecast (0.67 > 0.6))
+  Slot 1: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.06 | Window: [14100s, 14213s] | Mask Valid: True (Reason: should be valid!)
+  Slot 2: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.48 | Window: [14111s, 14230s] | Mask Valid: False (Reason: should be valid!)
+  Slot 3: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.52 | Window: [14127s, 14248s] | Mask Valid: False (Reason: should be valid!)
+  Slot 4: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.97 | Window: [14134s, 14189s] | Mask Valid: True (Reason: too cloudy forecast (0.97 > 0.6))
+  Slot 5: Tgt 15 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [14167s, 14205s] | Mask Valid: True (Reason: too cloudy forecast (1.00 > 0.6))
+-> CHOSE TARGET 19 (Slot 1) | Forecast Cloud: 0.06
+   Target 19 actual imaged state: False | Step Reward: +0.0000
+
+Step 63 | t=14250s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 19 | Priority: 0.66 | Forecast Cloud: 0.13 | Window: [14100s, 14213s] | Mask Valid: False (Reason: should be valid!)
+  Slot 1: Tgt 20 | Priority: 0.68 | Forecast Cloud: 0.51 | Window: [14111s, 14230s] | Mask Valid: False (Reason: should be valid!)
+  Slot 2: Tgt 22 | Priority: 0.60 | Forecast Cloud: 0.64 | Window: [14127s, 14248s] | Mask Valid: False (Reason: too cloudy forecast (0.64 > 0.6))
+  Slot 3: Tgt 16 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [14134s, 14189s] | Mask Valid: True (Reason: too cloudy forecast (0.88 > 0.6))
+  Slot 4: Tgt 15 | Priority: 0.54 | Forecast Cloud: 0.99 | Window: [14167s, 14205s] | Mask Valid: True (Reason: too cloudy forecast (0.99 > 0.6))
+  Slot 5: Tgt 29 | Priority: 0.39 | Forecast Cloud: 0.47 | Window: [14265s, 14385s] | Mask Valid: True (Reason: should be valid!)
+-> CHOSE TARGET 29 (Slot 5) | Forecast Cloud: 0.47
+   Target 29 actual imaged state: False | Step Reward: +0.0000
+
+Step 64 | t=14340s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 29 | Priority: 0.39 | Forecast Cloud: 0.32 | Window: [14265s, 14385s] | Mask Valid: True (Reason: should be valid!)
+  Slot 1: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.75 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15450))
+  Slot 2: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.42 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15450))
+  Slot 3: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.57 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15450))
+  Slot 4: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.91 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15450))
+  Slot 5: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.90 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15450))
+-> CHOSE TARGET 29 (Slot 0) | Forecast Cloud: 0.32
+   Target 29 actual imaged state: False | Step Reward: +0.0000
+
+Step 65 | t=14430s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 29 | Priority: 0.39 | Forecast Cloud: 0.42 | Window: [14265s, 14385s] | Mask Valid: True (Reason: should be valid!)
+  Slot 1: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.77 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15540))
+  Slot 2: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.54 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15540))
+  Slot 3: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.62 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15540))
+  Slot 4: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.93 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15540))
+  Slot 5: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.86 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15540))
+-> CHOSE TARGET 29 (Slot 0) | Forecast Cloud: 0.42
+   Target 29 actual imaged state: False | Step Reward: +0.0000
+
+Step 66 | t=14490s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.75 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15630))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.45 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15630))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.56 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15630))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.92 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15630))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.91 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15630))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15630))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 67 | t=14520s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.73 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15690))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.46 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15690))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.59 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15690))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.89 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15690))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15690))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.65 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15690))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 68 | t=14550s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.75 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15720))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.45 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15720))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.64 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15720))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.88 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15720))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.89 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15720))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.62 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15720))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 69 | t=14580s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.80 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15750))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.39 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15750))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.61 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15750))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.92 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15750))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.95 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15750))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15750))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 70 | t=14610s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.78 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15780))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.42 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15780))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.58 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15780))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.96 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15780))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.93 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15780))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15780))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 71 | t=14640s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.88 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15810))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.33 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15810))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.56 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15810))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.88 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15810))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.90 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15810))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15810))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 72 | t=14670s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.78 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15840))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.45 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15840))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.53 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15840))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.98 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15840))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.84 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15840))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15840))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 73 | t=14700s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.83 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15870))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.42 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15870))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.67 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15870))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.90 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15870))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.89 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15870))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.50 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15870))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 74 | t=14730s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.73 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15900))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.42 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15900))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.57 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15900))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.91 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15900))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.90 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15900))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.56 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15900))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 75 | t=14760s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.79 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15930))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.47 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15930))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.51 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15930))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15930))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.96 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15930))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.59 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15930))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 76 | t=14790s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.81 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15960))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.53 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15960))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.64 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15960))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.93 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15960))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.95 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15960))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.52 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15960))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 77 | t=14820s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.76 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=15990))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.41 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=15990))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.60 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=15990))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=15990))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.95 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=15990))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=15990))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 78 | t=14850s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.76 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16020))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.37 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16020))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.54 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16020))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.99 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16020))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.86 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16020))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16020))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 79 | t=14880s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.84 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16050))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.47 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16050))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.53 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16050))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.90 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16050))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.86 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16050))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.64 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16050))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 80 | t=14910s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.74 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16080))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.52 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16080))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.51 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16080))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.92 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16080))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.93 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16080))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.59 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16080))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 81 | t=14940s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.80 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16110))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.38 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16110))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.58 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16110))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.98 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16110))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.91 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16110))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16110))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 82 | t=14970s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.70 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16140))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.40 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16140))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.65 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16140))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.92 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16140))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.91 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16140))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.65 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16140))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 83 | t=15000s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.87 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16170))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.43 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16170))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.58 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16170))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.94 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16170))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.94 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16170))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.64 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16170))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 84 | t=15030s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.72 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16200))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.56 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16200))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.59 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16200))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.97 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16200))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.90 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16200))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.63 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16200))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 85 | t=15060s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.73 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16230))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.42 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16230))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.62 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16230))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.88 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16230))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.86 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16230))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.61 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16230))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 86 | t=15090s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.85 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16260))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.39 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16260))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.60 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16260))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.99 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16260))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.81 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16260))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16260))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 87 | t=15120s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.83 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16290))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.49 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16290))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.59 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16290))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16290))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.83 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16290))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.67 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16290))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 88 | t=15150s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.75 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16320))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.44 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16320))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.58 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16320))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 1.00 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16320))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.95 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16320))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.69 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16320))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 89 | t=15180s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.77 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16350))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.54 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16350))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.60 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16350))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.97 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16350))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.90 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16350))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.59 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16350))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 90 | t=15210s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.78 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16380))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.43 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16380))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.71 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16380))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.95 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16380))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.91 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16380))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.63 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16380))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 91 | t=15240s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.79 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16410))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.41 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16410))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.53 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16410))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.89 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16410))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.86 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16410))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.55 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16410))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 92 | t=15270s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.81 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16440))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.50 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16440))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.54 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16440))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.98 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16440))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.94 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16440))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.62 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16440))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 93 | t=15300s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.78 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16470))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.49 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16470))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.61 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16470))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.98 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16470))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.91 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16470))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.54 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16470))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 94 | t=15330s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.85 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16500))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.50 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16500))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.60 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16500))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.89 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16500))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.80 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16500))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.58 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16500))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 95 | t=15360s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.86 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16530))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.53 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16530))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.62 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16530))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.94 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16530))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.91 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16530))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.56 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16530))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 96 | t=15390s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.83 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16560))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.47 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16560))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.62 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16560))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.89 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16560))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.88 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16560))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.55 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16560))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 97 | t=15420s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.81 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16590))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.43 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16590))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.61 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16590))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.96 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16590))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.94 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16590))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.62 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16590))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 98 | t=15450s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.77 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16620))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.49 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16620))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.59 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16620))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.99 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16620))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.92 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16620))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.62 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16620))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 99 | t=15480s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.80 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16650))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.46 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16650))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.53 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16650))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.95 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16650))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.93 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16650))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.65 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16650))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
+
+Step 100 | t=15510s
+Upcoming Targets in Observation:
+  Slot 0: Tgt 27 | Priority: 0.43 | Forecast Cloud: 0.74 | Window: [19964s, 20065s] | Mask Valid: False (Reason: too far in future (w0=19964 > now+1200=16680))
+  Slot 1: Tgt 40 | Priority: 0.16 | Forecast Cloud: 0.45 | Window: [37611s, 37668s] | Mask Valid: False (Reason: too far in future (w0=37611 > now+1200=16680))
+  Slot 2: Tgt 37 | Priority: 0.22 | Forecast Cloud: 0.57 | Window: [48116s, 48190s] | Mask Valid: False (Reason: too far in future (w0=48116 > now+1200=16680))
+  Slot 3: Tgt 22 | Priority: 0.54 | Forecast Cloud: 0.91 | Window: [53716s, 53750s] | Mask Valid: False (Reason: too far in future (w0=53716 > now+1200=16680))
+  Slot 4: Tgt 20 | Priority: 0.58 | Forecast Cloud: 0.80 | Window: [53724s, 53776s] | Mask Valid: False (Reason: too far in future (w0=53724 > now+1200=16680))
+  Slot 5: Tgt 19 | Priority: 0.60 | Forecast Cloud: 0.60 | Window: [53744s, 53790s] | Mask Valid: False (Reason: too far in future (w0=53744 > now+1200=16680))
+-> CHOSE DRIFT (Action 48) because no targets had valid masks.
